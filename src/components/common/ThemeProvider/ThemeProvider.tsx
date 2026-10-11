@@ -1,14 +1,12 @@
 'use client';
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProvider as NextThemesProvider } from '@wrksz/themes/next';
 import type { ReactNode } from 'react';
 
-interface ThemeProviderProps {
-  children: ReactNode;
-}
+type ThemeProviderProps = { children: ReactNode };
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => (
-  <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+  <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem>
     {children}
   </NextThemesProvider>
 );

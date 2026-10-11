@@ -1,15 +1,15 @@
 'use client';
 
-import { ChevronDown, Menu, X } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import { Logo } from '@/components/common/Logo/Logo';
 import { NavDropdown } from '@/components/common/Navbar/NavDropdown';
 import { ThemeToggle } from '@/components/common/ThemeToggle/ThemeToggle';
 import { Badge } from '@/components/ui/Badge/Badge';
 import { Button } from '@/components/ui/Button/Button';
 import { NAV_ITEMS } from '@/constants/navigation';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 
 const SCROLL_THRESHOLD_PX = 8;
 
@@ -90,16 +90,18 @@ export const Navbar = () => {
   ].join(' ');
 
   return (
-    <header className="sticky top-0 z-50 w-full pt-3 sm:pt-4">
-      <div className="mx-auto w-full max-w-7xl px-3 sm:px-4">
+    <header className="sticky top-0 z-50 w-full pt-[5px] pb-0">
+      <div className="mx-auto w-full max-w-7xl px-8">
         <div className={barClasses}>
           <nav
             aria-label="Main"
-            className="flex h-14 w-full items-center justify-between gap-3 px-4 sm:px-5 lg:h-16"
+            className="grid h-14 w-full grid-cols-[auto_1fr] items-center gap-3 px-4 sm:px-5 lg:h-16 lg:grid-cols-[1fr_auto_1fr]"
           >
-            <Logo />
+            <div className="flex items-center justify-self-start">
+              <Logo />
+            </div>
 
-            <ul className="relative hidden items-center gap-0.5 lg:flex">
+            <ul className="relative hidden items-center justify-center gap-0.5 lg:flex">
               {NAV_ITEMS.map((item) =>
                 item.groups ? (
                   <NavDropdown
@@ -118,14 +120,9 @@ export const Navbar = () => {
               )}
             </ul>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-self-end gap-2">
               <ThemeToggle />
-              <Button
-                href={LOGIN_LINK.href}
-                variant="ghost"
-                size="sm"
-                className="max-lg:hidden"
-              >
+              <Button href={LOGIN_LINK.href} variant="ghost" size="sm" className="max-lg:hidden">
                 {LOGIN_LINK.label}
               </Button>
               <Button href={REGISTER_LINK.href} size="sm" className="max-lg:hidden">
@@ -180,9 +177,7 @@ export const Navbar = () => {
                       type="button"
                       aria-expanded={isAccordionOpen}
                       aria-controls={accordionId}
-                      onClick={() =>
-                        setOpenAccordionLabel(isAccordionOpen ? null : item.label)
-                      }
+                      onClick={() => setOpenAccordionLabel(isAccordionOpen ? null : item.label)}
                       className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-brand-blue/10 hover:text-brand-blue"
                     >
                       {item.label}
@@ -218,55 +213,55 @@ export const Navbar = () => {
                                 </p>
                               ) : null}
                               <ul className={group.title ? 'mt-1.5 space-y-0.5' : 'space-y-0.5'}>
-                              {group.links.map((link) => {
-                                const linkClasses = [
-                                  'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors',
-                                  link.isComingSoon
-                                    ? 'cursor-not-allowed text-[var(--muted)] opacity-60'
-                                    : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue',
-                                ].join(' ');
+                                {group.links.map((link) => {
+                                  const linkClasses = [
+                                    'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors',
+                                    link.isComingSoon
+                                      ? 'cursor-not-allowed text-[var(--muted)] opacity-60'
+                                      : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue',
+                                  ].join(' ');
 
-                                const linkContent = (
-                                  <>
-                                    {link.icon ? (
-                                      <link.icon
-                                        aria-hidden="true"
-                                        className="h-4 w-4 shrink-0 text-brand-blue"
-                                      />
-                                    ) : null}
-                                    <span className="min-w-0 flex-1">{link.label}</span>
-                                    {link.isComingSoon ? (
-                                      <Badge
-                                        variant="neutral"
-                                        className="shrink-0 border border-[var(--border)]"
-                                      >
-                                        Soon
-                                      </Badge>
-                                    ) : null}
-                                  </>
-                                );
+                                  const linkContent = (
+                                    <>
+                                      {link.icon ? (
+                                        <link.icon
+                                          aria-hidden="true"
+                                          className="h-4 w-4 shrink-0 text-brand-blue"
+                                        />
+                                      ) : null}
+                                      <span className="min-w-0 flex-1">{link.label}</span>
+                                      {link.isComingSoon ? (
+                                        <Badge
+                                          variant="neutral"
+                                          className="shrink-0 border border-[var(--border)]"
+                                        >
+                                          Soon
+                                        </Badge>
+                                      ) : null}
+                                    </>
+                                  );
 
-                                return (
-                                  <li key={link.label}>
-                                    {link.isComingSoon ? (
-                                      <span aria-disabled="true" className={linkClasses}>
-                                        {linkContent}
-                                      </span>
-                                    ) : (
-                                      <Link
-                                        href={link.href}
-                                        onClick={closeMobileMenu}
-                                        className={linkClasses}
-                                      >
-                                        {linkContent}
-                                      </Link>
-                                    )}
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        ))}
+                                  return (
+                                    <li key={link.label}>
+                                      {link.isComingSoon ? (
+                                        <span aria-disabled="true" className={linkClasses}>
+                                          {linkContent}
+                                        </span>
+                                      ) : (
+                                        <Link
+                                          href={link.href}
+                                          onClick={closeMobileMenu}
+                                          className={linkClasses}
+                                        >
+                                          {linkContent}
+                                        </Link>
+                                      )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          ))}
                       </div>
                     ) : null}
                   </li>

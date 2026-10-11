@@ -1,15 +1,13 @@
-import { CTA } from './_components/CTA/CTA';
-import { Hero } from './_components/Hero/Hero';
-import { Footer } from '@/components/common/Footer/Footer';
+import Footer from '@/components/common/Footer/Footer';
 import { Navbar } from '@/components/common/Navbar/Navbar';
+import Home from '@/components/common/Pages/Home/Home';
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <CTA />
+        <Home />
       </main>
       <Footer />
     </>

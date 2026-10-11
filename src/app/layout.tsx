@@ -1,7 +1,7 @@
+import { ThemeProvider } from '@/components/common/ThemeProvider/ThemeProvider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
-import { ThemeProvider } from '@/components/common/ThemeProvider/ThemeProvider';
 import './globals.css';
 
 const inter = Inter({
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
