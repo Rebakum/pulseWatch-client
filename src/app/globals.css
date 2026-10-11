@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+/* Dark mode: add class "dark" on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Brand + status tokens (CodesRaft logo colors) ---------- */
+@theme {
+  --color-brand-blue: #1279c1;
+  --color-brand-purple: #68308f;
+  --color-brand-magenta: #85429a;
+
+  --color-status-up: #16a34a;
+  --color-status-down: #dc2626;
+  --color-status-paused: #6b7280;
+  --color-status-warning: #f59e0b;
+
+  --background-image-brand-gradient: linear-gradient(135deg, #1479c0 0%, #5568b0 50%, #85429a 100%);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Loader animation */
+  --animate-loader-bar: loader-bar 1.4s linear infinite;
+
+  @keyframes loader-bar {
+    0% {
+      box-shadow: 0 0 0 rgb(0, 0, 5);
+      opacity: 0;
+    }
+    50% {
+      box-shadow: 0 20px 50px rgb(0, 0, 5);
+      opacity: 1;
+    }
+    100% {
+      box-shadow: 0 20px 50px rgb(0, 0, 5);
+      opacity: 0;
+    }
+  }
+}
+
+/* ---------- Theme variables (light / dark) ---------- */
+:root {
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --background: #0b1020;
+  --surface: #121a30;
+  --foreground: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1f2a44;
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-blue);
+    outline-offset: 2px;
+  }
+}
