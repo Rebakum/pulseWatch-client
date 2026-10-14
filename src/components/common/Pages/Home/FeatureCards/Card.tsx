@@ -21,7 +21,7 @@ export function Card({
           <h3 className="text-[15px] font-semibold leading-snug text-[var(--foreground)]">
             {title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-sky-300/70">{text}</p>
+          <p className="mt-2 text-sm leading-relaxed text-brand-blue">{text}</p>
         </div>
         <ArrowButton href={href} label={title} />
       </div>

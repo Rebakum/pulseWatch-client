@@ -14,7 +14,7 @@ type FaqItemProps = {
 
 export default function FaqItem({ id, question, answer, isOpen, onToggle }: FaqItemProps) {
   return (
-    <div className="py-2">
+    <div className="py-1">
       <h3>
         <button
           type="button"
@@ -22,7 +22,7 @@ export default function FaqItem({ id, question, answer, isOpen, onToggle }: FaqI
           aria-expanded={isOpen}
           aria-controls={`${id}-panel`}
           id={`${id}-button`}
-          className="group flex w-full cursor-pointer items-center justify-between gap-4 rounded-md py-3 text-left"
+          className="group flex w-full cursor-pointer items-center justify-between gap-4 rounded-md py-4 text-left"
         >
           <span
             className={`text-base font-semibold tracking-tight transition-colors sm:text-lg ${
@@ -58,7 +58,7 @@ export default function FaqItem({ id, question, answer, isOpen, onToggle }: FaqI
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="space-y-3 pb-4 pr-8 pt-1 text-sm leading-relaxed text-[var(--muted)]">
+            <div className="space-y-3 pb-5 pr-8 pt-1 text-sm leading-relaxed text-[var(--muted)]">
               {typeof answer === 'string' ? <p>{answer}</p> : answer}
             </div>
           </motion.div>

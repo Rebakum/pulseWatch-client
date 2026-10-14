@@ -5,7 +5,7 @@ import { MobileVisual } from './MobileVisual';
 export default function FeatureCards() {
   return (
     <section className="dark bg-[var(--background)] py-16 text-[var(--foreground)]">
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
         <Card
           visual={<IntegrationsVisual />}
           title="Integrations that keep your whole team in the loop."

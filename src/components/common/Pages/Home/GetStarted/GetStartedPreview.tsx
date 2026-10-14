@@ -69,10 +69,9 @@ export function GetStartedPreview() {
         <div className="mt-1.5 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-2.5 py-2 text-[10px] text-[var(--muted)]">
           https://
         </div>
-
-        <div className="mt-3 rounded-lg bg-brand-gradient py-2 text-center text-[10px] font-semibold text-white">
+        <button className="mt-10 inline-flex justify-center items-center rounded-full bg-brand-gradient w-full text-center py-2.5 px-4 text-sm font-semibold text-white shadow-md transition hover:opacity-90">
           Create monitor
-        </div>
+        </button>
 
         <p className="mt-2 text-[8px] leading-snug text-[var(--muted)]">
           You can add more monitor types later, such as keyword, ping and port checks.

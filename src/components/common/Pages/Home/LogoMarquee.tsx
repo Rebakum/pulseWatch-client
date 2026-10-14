@@ -54,7 +54,7 @@ export default function LogoMarquee() {
       aria-labelledby="trusted-by-title"
       className="border-y border-[var(--border)] bg-[var(--background)] py-10 text-[var(--foreground)]"
     >
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           id="trusted-by-title"
           className="mb-8 text-center text-xs font-semibold tracking-widest text-[var(--muted)] sm:text-sm"

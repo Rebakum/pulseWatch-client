@@ -3,8 +3,8 @@
 import { Logo } from '@/components/common/Logo/Logo';
 import { NavDropdown } from '@/components/common/Navbar/NavDropdown';
 import { ThemeToggle } from '@/components/common/ThemeToggle/ThemeToggle';
+import ShaderButton from '@/components/shader-button/ShaderButton';
 import { Badge } from '@/components/ui/Badge/Badge';
-import { Button } from '@/components/ui/Button/Button';
 import { NAV_ITEMS } from '@/constants/navigation';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -64,9 +64,19 @@ export const Navbar = () => {
     };
     document.addEventListener('keydown', handleKeyDown);
 
+    const desktopBreakpoint = window.matchMedia('(min-width: 1024px)');
+    const handleBreakpointChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        setIsMenuOpen(false);
+        setOpenAccordionLabel(null);
+      }
+    };
+    desktopBreakpoint.addEventListener('change', handleBreakpointChange);
+
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', handleKeyDown);
+      desktopBreakpoint.removeEventListener('change', handleBreakpointChange);
     };
   }, [isMenuOpen]);
 
@@ -91,7 +101,7 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full pt-[5px] pb-0">
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={barClasses}>
           <nav
             aria-label="Main"
@@ -122,12 +132,18 @@ export const Navbar = () => {
 
             <div className="flex items-center justify-self-end gap-2">
               <ThemeToggle />
-              <Button href={LOGIN_LINK.href} variant="ghost" size="sm" className="max-lg:hidden">
+
+              {/* Desktop Login Link - 100% Fully Rounded */}
+              <Link
+                href={LOGIN_LINK.href}
+                className="inline-flex h-9 items-center justify-center rounded-full border border-[var(--border)] px-4 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue max-lg:hidden"
+              >
                 {LOGIN_LINK.label}
-              </Button>
-              <Button href={REGISTER_LINK.href} size="sm" className="max-lg:hidden">
+              </Link>
+
+              <ShaderButton href={REGISTER_LINK.href} className="h-9 px-4 text-sm max-lg:hidden">
                 {REGISTER_LINK.label}
-              </Button>
+              </ShaderButton>
 
               <button
                 type="button"
@@ -269,13 +285,18 @@ export const Navbar = () => {
               })}
             </ul>
 
-            <div className="mt-4 space-y-2 border-t border-[var(--border)] pt-4">
-              <Button href={LOGIN_LINK.href} variant="secondary" className="w-full">
+            <div className="mt-4 space-y-2 pt-4">
+              {/* Mobile/Tab Login Link  */}
+              <Link
+                href={LOGIN_LINK.href}
+                onClick={closeMobileMenu}
+                className="flex w-full items-center justify-center rounded-full border border-[var(--border)] px-4 py-2.5 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue"
+              >
                 {LOGIN_LINK.label}
-              </Button>
-              <Button href={REGISTER_LINK.href} className="w-full">
+              </Link>
+              <ShaderButton href={REGISTER_LINK.href} className="w-full py-2.5 text-sm">
                 {REGISTER_LINK.label}
-              </Button>
+              </ShaderButton>
             </div>
           </div>
         ) : null}

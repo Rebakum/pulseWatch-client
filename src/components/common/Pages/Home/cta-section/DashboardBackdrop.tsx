@@ -3,14 +3,18 @@ import ResponseChart from './ResponseChart';
 
 const nav = ['Monitoring', 'Incidents', 'Status pages', 'Maintenance'];
 
-/** Decorative blurred dashboard, tilted, faded background */
+/**
+ * Decorative blurred dashboard.
+ * Fixed width + centered (left-1/2 -translate-x-1/2) so it stays behind the
+ * content on any screen size and never gets cut off at the left edge.
+ */
 export default function DashboardBackdrop() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 select-none overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_5%,black_35%,black_60%,transparent_95%)]"
+      className="pointer-events-none absolute inset-0 hidden select-none overflow-hidden md:block [mask-image:linear-gradient(to_bottom,transparent_5%,black_35%,black_60%,transparent_95%)]"
     >
-      <div className="absolute left-[-6%] top-[26%] h-[420px] w-[112%] -rotate-[5deg] rounded-2xl border border-[var(--border)] bg-[var(--surface)] opacity-50 blur-[1.5px]">
+      <div className="absolute left-1/2 top-[26%] h-[420px] w-[1100px] -translate-x-1/2 -rotate-[5deg] rounded-2xl border border-[var(--border)] bg-[var(--surface)] opacity-50 blur-[1.5px] [mask-image:linear-gradient(to_right,transparent,black_18%,black_82%,transparent)]">
         <div className="flex h-full">
           {/* sidebar */}
           <div className="w-52 shrink-0 space-y-3 border-r border-[var(--border)] p-5">
@@ -50,9 +54,9 @@ export default function DashboardBackdrop() {
               <ResponseChart />
             </div>
             <div className="mt-3 flex justify-between text-[10px] text-[var(--muted)]">
-              <span>May 13, &apos;23</span>
-              <span>May 20, &apos;23</span>
-              <span>May 28, &apos;23</span>
+              <span>May 13, '23</span>
+              <span>May 20, '23</span>
+              <span>May 28, '23</span>
               <span className="text-[var(--foreground)]">1,546.96 ms</span>
             </div>
           </div>

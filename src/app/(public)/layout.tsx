@@ -1,14 +1,12 @@
 import Footer from '@/components/common/Footer/Footer';
 import { Navbar } from '@/components/common/Navbar/Navbar';
-import Home from '@/components/common/Pages/Home/Home';
+import type { ReactNode } from 'react';
 
-export default function HomePage() {
+export default function PublicLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Navbar />
-      <main>
-        <Home />
-      </main>
+      <main>{children}</main>
       <Footer />
     </>
   );

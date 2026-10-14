@@ -41,8 +41,8 @@ export default function DowntimeFeatures() {
   const cardDelays = [0.3, 0.6, 0.9, 1.2, 1.5, 1.8];
 
   return (
-    <section className="bg-[var(--background)] text-[var(--foreground)] px-8 py-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="overflow-hidden bg-[var(--background)] py-16 text-[var(--foreground)] sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header Row with Motion Animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

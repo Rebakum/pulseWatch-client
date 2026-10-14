@@ -6,27 +6,29 @@ export default function Footer() {
   const [first, ...rest] = sections; // Product ... Free tools
 
   return (
-    <footer className="dark bg-[var(--background)] px-6 pb-10 pt-16 text-[var(--foreground)]">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-8 gap-y-14 lg:grid-cols-4">
-        {/* row 1: brand + Product + Resources + Company */}
-        <div className="col-span-2 lg:col-span-1">
-          <FooterBrand />
+    <footer className="dark bg-[var(--background)] pb-10 pt-16 text-[var(--foreground)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-4 sm:gap-x-8 lg:gap-y-14">
+          {/* row 1: brand + Product + Resources + Company */}
+          <div className="col-span-2 sm:col-span-4 lg:col-span-1">
+            <FooterBrand />
+          </div>
+          <FooterColumn {...first} />
+          <FooterColumn {...rest[0]} />
+          <FooterColumn {...rest[1]} />
+
+          {/* row 2: Monitoring + Features + Comparison + Free tools */}
+          {rest.slice(2).map((s) => (
+            <FooterColumn key={s.title} {...s} />
+          ))}
         </div>
-        <FooterColumn {...first} />
-        <FooterColumn {...rest[0]} />
-        <FooterColumn {...rest[1]} />
 
-        {/* row 2: Monitoring + Features + Comparison + Free tools */}
-        {rest.slice(2).map((s) => (
-          <FooterColumn key={s.title} {...s} />
-        ))}
+        <span
+          role="img"
+          aria-label="All systems operational"
+          className="mx-auto mt-16 block size-2.5 rounded-full bg-emerald-600/80"
+        />
       </div>
-
-      <span
-        role="img"
-        aria-label="All systems operational"
-        className="mx-auto mt-16 block size-2.5 rounded-full bg-emerald-600/80"
-      />
     </footer>
   );
 }

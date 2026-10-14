@@ -108,7 +108,7 @@ export const NAV_ITEMS: NavItem[] = [
           { label: 'API', href: '#solutions' },
           { label: 'Integrations', href: '#solutions' },
           { label: 'Webhooks', href: '#solutions' },
-          { label: 'CLI', href: '#', isComingSoon: true },
+          { label: 'CLI', href: '#solutions', isComingSoon: true },
           { label: 'Mobile app', href: '#', isComingSoon: true },
         ],
       },
@@ -120,7 +120,7 @@ export const NAV_ITEMS: NavItem[] = [
       },
     ],
   },
-  { label: 'Enterprise', href: '#enterprise' },
+  { label: 'Enterprise', href: '/enterprise' },
   {
     label: 'Resources',
     columns: 3,
@@ -160,7 +160,7 @@ export const NAV_ITEMS: NavItem[] = [
       },
     ],
   },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Pricing', href: '/pricing' },
 ];
 
 export const NOTIFICATION_CHANNELS: NotificationChannel[] = [

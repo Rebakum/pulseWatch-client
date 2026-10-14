@@ -17,7 +17,7 @@ function ArrowButton({ href = '#', label }: { href?: string; label: string }) {
     <a
       href={href}
       aria-label={label}
-      className="grid size-9 shrink-0 place-items-center rounded-full border border-emerald-400/30 bg-emerald-400/5 text-emerald-400 transition hover:bg-emerald-400/15"
+      className="grid size-9 shrink-0 place-items-center rounded-full border border-brand-blue/40 bg-brand-blue/5 text-brand-blue transition hover:bg-brand-blue/15"
     >
       <svg
         viewBox="0 0 20 20"
@@ -52,7 +52,7 @@ function Card({
           <h3 className="text-[15px] font-semibold leading-snug text-[var(--foreground)]">
             {title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-sky-300/70">{text}</p>
+          <p className="mt-2 text-sm leading-relaxed text-brand-blue">{text}</p>
         </div>
         <ArrowButton href={href} label={title} />
       </div>
@@ -397,7 +397,7 @@ function MobileVisual() {
 export default function FeatureCards() {
   return (
     <section className="dark bg-[var(--background)] py-16 text-[var(--foreground)]">
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
         <Card
           visual={<IntegrationsVisual />}
           title="Integrations that keep your whole team in the loop."

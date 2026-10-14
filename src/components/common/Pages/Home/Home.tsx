@@ -1,4 +1,4 @@
-import CtaSection from './cta-section/CtaSection';
+import CtaSection from './Cta-section/CtaSection';
 import DashboardPreview from './DashboardPreview';
 import DowntimeFeatures from './DowntimeFeatures';
 import { Enterprise } from './Enterprise/Enterprise';

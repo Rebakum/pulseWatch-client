@@ -20,7 +20,7 @@ export default function DashboardPreview() {
       aria-label="Dashboard preview"
       className="bg-[var(--background)] py-10 text-[var(--foreground)]"
     >
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-2 shadow-2xl backdrop-blur-md sm:p-4">
           {/* Outer Glow Effect */}
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-gradient opacity-15 blur-[120px] pointer-events-none rounded-full" />
