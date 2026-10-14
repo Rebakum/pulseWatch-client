@@ -61,7 +61,10 @@ export default function SavingsCalculator() {
       id="savings"
       className="relative isolate overflow-hidden scroll-mt-24 bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16"
     >
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      >
         <div className="absolute -left-40 top-1/4 h-[26rem] w-[26rem] rounded-full bg-brand-blue/15 blur-[120px]" />
         <div className="absolute -right-32 bottom-0 h-[24rem] w-[24rem] rounded-full bg-brand-purple/15 blur-[120px]" />
       </div>
@@ -226,12 +229,12 @@ export default function SavingsCalculator() {
 
               <div className="my-6 border-t border-[var(--border)]" />
 
-              <p className="text-4xl font-extrabold tracking-tight text-[var(--color-status-up)] sm:text-5xl">
+              <p className="text-4xl font-extrabold tracking-tight text-[var(--foreground)] sm:text-5xl">
                 {usd(estimate.savings)}
               </p>
               <p className="mt-2 text-xs text-[var(--muted)]">
-                {content.results.savingsCaption} ({estimate.savingsPercent}%{' '}
-                {content.results.lower})
+                {content.results.savingsCaption} ({estimate.savingsPercent}% {content.results.lower}
+                )
               </p>
 
               <p className="mt-5 text-sm font-semibold leading-snug">

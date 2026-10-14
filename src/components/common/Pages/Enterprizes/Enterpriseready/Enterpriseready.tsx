@@ -3,7 +3,7 @@ import { content } from './Content';
 
 export default function EnterpriseReady() {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
+    <section className="relative overflow-hidden dark bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 

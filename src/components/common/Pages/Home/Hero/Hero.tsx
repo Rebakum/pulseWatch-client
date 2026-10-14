@@ -5,9 +5,6 @@ import React, { useState } from 'react';
 
 import ShaderButton from '@/components/shader-button/ShaderButton';
 
-// Change this to your real project/brand name
-const BRAND_NAME = 'PulseWatch';
-
 const features: React.ReactNode[] = [
   <>
     50 monitors for <strong className="text-[var(--foreground)]">free</strong>
