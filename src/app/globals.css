@@ -630,6 +630,22 @@
     background:
       radial-gradient(
         ellipse at 32% 35%,
+        color-mix(in srgb, var(--color-brand-blue) 18%, transparent) 0%,
+        color-mix(in srgb, var(--color-brand-purple) 12%, transparent) 44%,
+        transparent 74%
+      ),
+      radial-gradient(
+        ellipse at 65% 62%,
+        color-mix(in srgb, var(--color-brand-magenta) 10%, transparent) 0%,
+        transparent 68%
+      );
+    filter: blur(2.25rem);
+  }
+
+  .dark .third-party-visual-glow {
+    background:
+      radial-gradient(
+        ellipse at 32% 35%,
         color-mix(in srgb, var(--color-brand-blue) 32%, transparent) 0%,
         color-mix(in srgb, var(--color-brand-purple) 18%, transparent) 44%,
         transparent 74%
@@ -639,6 +655,13 @@
         color-mix(in srgb, var(--color-brand-magenta) 16%, transparent) 0%,
         transparent 68%
       );
-    filter: blur(2.25rem);
+  }
+
+  .third-party-visual-fade {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--background) 68%, transparent)
+    );
   }
 }

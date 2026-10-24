@@ -73,7 +73,7 @@ export default function ThirdPartyMonitoringHero() {
       <section className="mx-auto grid w-full max-w-[1240px] grid-cols-1 items-center gap-8 px-5 py-16 sm:px-8 lg:min-h-[660px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 lg:py-12">
         {/* Left content */}
         <div className="relative z-10 min-w-0">
-          <h1 className="mb-7 text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-[1.1] tracking-[-0.045em] text-white">
+          <h1 className="mb-7 text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-[1.1] tracking-[-0.045em] text-[var(--foreground)]">
             Is it your{' '}
             <span className="bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-transparent">
               code
@@ -114,30 +114,33 @@ export default function ThirdPartyMonitoringHero() {
           {/* ---------- Layer 1: dashboard (xl+) ---------- */}
           <div
             aria-hidden="true"
-            className="absolute left-[43%] top-[410px] z-[1] hidden h-0 w-0 origin-top-left opacity-[0.5] [transform:skewY(-16deg)_skewX(33deg)] xl:top-[420px] xl:block"
+            className="absolute left-[43%] top-[410px] z-[1] hidden h-0 w-0 origin-top-left text-[#e5e7eb] opacity-[0.5] [transform:skewY(-16deg)_skewX(33deg)] xl:top-[420px] xl:block"
           >
             {/* backdrop panel */}
-            <div className="absolute -left-[190px] -top-[310px] h-[340px] w-[640px] rounded-[22px] border border-white/[0.05] " />
+            <div
+            //   className="
+            // absolute -left-[160px] -top-[310px] h-[460px] w-[640px] rounded-[22px] border border-white/[0.05] bg-[linear-gradient(155deg,#172133,#0d1421)]"
+            />
 
             {/* availability */}
             <div className="absolute left-[258px] top-[-263px] h-[62px] w-[150px] rounded-xl border border-white/[0.07] bg-white/[0.04] p-2.5">
-              <small className="block text-[9px] text-[var(--muted)]">Availability</small>
+              <small className="block text-[9px] text-[#a9b4c4]">Availability</small>
               <strong className="text-sm">99.98%</strong>
             </div>
 
             {/* last 30 days */}
             <div className="absolute left-[424px] top-[-211px] h-[58px] w-[200px] rounded-xl border border-white/[0.07] bg-white/[0.04] p-2.5">
-              <small className="block text-[9px] text-[var(--muted)]">Last 30 days</small>
+              <small className="block text-[9px] text-[#a9b4c4]">Last 30 days</small>
               <strong className="text-sm text-[#ef5b5b]">2 incidents</strong>
             </div>
 
             {/* active incidents */}
             <div className="absolute left-[135px] top-[-125px] h-[115px] w-[340px] overflow-hidden rounded-xl border border-white/[0.07] bg-white/[0.035] px-3 py-2">
-              <p className="mb-1 text-[9px] font-semibold text-[var(--muted)]">Active incidents</p>
+              <p className="mb-1 text-[9px] font-semibold text-[#a9b4c4]">Active incidents</p>
               {activeIncidents.map((incident) => (
                 <div
                   key={incident.text}
-                  className="grid grid-cols-[66px_40px_minmax(0,1fr)] items-center gap-2 border-t border-white/[0.07] py-2 text-[9px] text-[var(--muted)]"
+                  className="grid grid-cols-[66px_40px_minmax(0,1fr)] items-center gap-2 border-t border-white/[0.07] py-2 text-[9px] text-[#a9b4c4]"
                 >
                   <span className="flex items-center gap-1.5 text-[#ef5b5b]">
                     <i className="size-1.5 shrink-0 rounded-full bg-current" />
@@ -157,12 +160,12 @@ export default function ThirdPartyMonitoringHero() {
                 </b>
                 <span className="font-semibold">
                   John Doe
-                  <small className="block text-[7px] text-[var(--muted)]">Team owner</small>
+                  <small className="block text-[7px] text-[#a9b4c4]">Team owner</small>
                 </span>
               </div>
-              <small className="block text-[8px] text-[var(--muted)]">Your teams</small>
-              <span className="mt-1 block truncate text-[var(--muted)]">Team Acme team</span>
-              <span className="mt-1 block truncate text-[var(--muted)]">Moo team</span>
+              <small className="block text-[8px] text-[#a9b4c4]">Your teams</small>
+              <span className="mt-1 block truncate text-[#a9b4c4]">Team Acme team</span>
+              <span className="mt-1 block truncate text-[#a9b4c4]">Moo team</span>
               <div className="mt-2 rounded-md bg-[image:var(--background-image-brand-gradient)] p-1.5 text-center font-semibold text-white">
                 Upgrade now
               </div>
@@ -174,7 +177,7 @@ export default function ThirdPartyMonitoringHero() {
               {resolvedIncidents.map((incident) => (
                 <div
                   key={incident.text}
-                  className="grid grid-cols-[66px_40px_minmax(0,1fr)] items-center gap-2 border-t border-white/[0.07] py-3 text-[9px] text-[var(--muted)]"
+                  className="grid grid-cols-[66px_40px_minmax(0,1fr)] items-center gap-2 border-t border-white/[0.07] py-3 text-[9px] text-[#a9b4c4]"
                 >
                   <span className="flex items-center gap-1.5 text-[var(--color-brand-blue)]">
                     <i className="size-1.5 shrink-0 rounded-full bg-current" />
@@ -190,7 +193,7 @@ export default function ThirdPartyMonitoringHero() {
           {/* ---------- Layer 2: fade gradient ---------- */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-[64%] z-[2] hidden w-[45%] bg-[linear-gradient(90deg,transparent,rgba(11,17,27,0.6))] xl:block"
+            className="third-party-visual-fade pointer-events-none absolute inset-y-0 left-[64%] z-[2] hidden w-[45%] xl:block"
           />
 
           {/* ---------- Layer 3: provider cards ---------- */}
