@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "src/components/common/Pages/Features/Website-monitoring/Keyword Monitoring"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next/dev/types"]
 }

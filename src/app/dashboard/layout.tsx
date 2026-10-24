@@ -7,17 +7,17 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Sidebar />
 
       <div className="flex min-h-screen flex-col md:pl-64">
-        <header className="sticky top-0 z-20 flex h-16 items-center gap-4 border-b border-slate-200 bg-white/80 pl-16 pr-4 backdrop-blur md:pl-6 dark:border-slate-800 dark:bg-slate-900/80">
-          <p className="text-sm font-medium text-slate-900 dark:text-white">
+        <header className="sticky top-0 z-20 flex h-16 items-center gap-4 border-b border-[var(--border)] bg-[color:var(--surface)]/80 pl-16 pr-4 text-[var(--foreground)] backdrop-blur md:pl-6">
+          <p className="text-sm font-medium">
             PulseWatch Dashboard
           </p>
 
           <div className="ml-auto flex items-center gap-3">
-            <span className="hidden text-xs text-slate-500 sm:inline dark:text-slate-400">
+            <span className="hidden text-xs text-[var(--muted)] sm:inline">
               Preview build
             </span>
             {/* Decorative placeholder avatar — the account menu arrives with the auth task. */}

@@ -7,7 +7,7 @@ export default function FooterColumn({ title, links }: FooterSection) {
     <nav aria-label={title}>
       <h3 className="text-[15px] font-semibold tracking-tight text-slate-200">
         {title}
-        <span className="text-emerald-500/70">.</span>
+        <span className="text-brand-blue/70">.</span>
       </h3>
 
       <ul className="mt-3 space-y-3">

@@ -1,13 +1,15 @@
+import Container from '@/components/common/Container';
+
 import { content } from './content';
 import FeatureIllustration from './FeatureIllustration';
 
 export default function AdvancedFeatures() {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
+    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-4 sm:px-6 lg:px-8 md:grid-cols-2 md:gap-16">
+      <Container className="relative grid items-center gap-12 md:grid-cols-2 md:gap-16">
         {/* Copy */}
         <div>
           <h2 className="mb-6 max-w-sm text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -25,7 +27,7 @@ export default function AdvancedFeatures() {
 
         {/* Illustration */}
         <FeatureIllustration />
-      </div>
+      </Container>
     </section>
   );
 }

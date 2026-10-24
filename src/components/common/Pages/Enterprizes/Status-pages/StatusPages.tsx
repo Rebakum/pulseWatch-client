@@ -1,13 +1,15 @@
+import Container from '@/components/common/Container';
+
 import { content } from './Content';
 import StatusPageMock from './StatusPageMock';
 
 export default function StatusPages({ brandName = 'PulseWatch' }: { brandName?: string }) {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-16 text-[var(--foreground)] sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-10 px-6 sm:px-8 md:grid-cols-2 md:gap-16">
+      <Container className="relative grid items-center gap-10 md:grid-cols-2 md:gap-16">
         {/* Copy (first on mobile, right side on desktop) */}
         <div className="md:order-2">
           <h2 className="mb-6 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
@@ -26,7 +28,7 @@ export default function StatusPages({ brandName = 'PulseWatch' }: { brandName?: 
         <div className="md:order-1">
           <StatusPageMock brandName={brandName} />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,9 +1,11 @@
+import Container from '@/components/common/Container';
+
 import { logos } from './Logos';
 
 export default function TrustedBy({ title = 'Logo strip preview' }: { title?: string }) {
   return (
-    <section className="border-y border-[var(--border)]/70 bg-[var(--surface)]/40 py-10 text-[var(--foreground)] md:py-16">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-[var(--border)]/70 bg-[var(--surface)]/40 py-10 text-[var(--foreground)]">
+      <Container>
         <p className="mb-7 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
           {title}
         </p>
@@ -31,7 +33,7 @@ export default function TrustedBy({ title = 'Logo strip preview' }: { title?: st
             Enterprise uptime monitoring built for teams that can&apos;t afford downtime.
           </p>
         )}
-      </div>
+      </Container>
     </section>
   );
 }

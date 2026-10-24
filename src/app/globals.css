@@ -173,6 +173,90 @@
   }
 }
 
+/* ---------- Outline CTA button (brand-blue hairline pill) ---------- */
+@layer components {
+  .outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.7rem;
+    border: 1.5px solid color-mix(in srgb, var(--color-brand-blue) 70%, transparent);
+    border-radius: 9999px;
+    background-color: transparent;
+    color: var(--foreground);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .outline-btn:hover {
+    background-color: color-mix(in srgb, var(--color-brand-blue) 12%, transparent);
+    border-color: var(--color-brand-blue);
+    box-shadow: 0 0 24px color-mix(in srgb, var(--color-brand-blue) 30%, transparent);
+  }
+
+  .outline-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* white hairline variant (light CTA on dark bands) */
+  .outline-btn--light {
+    border-color: color-mix(in srgb, var(--foreground) 40%, transparent);
+  }
+
+  .outline-btn--light:hover {
+    border-color: var(--foreground);
+    background-color: color-mix(in srgb, var(--foreground) 8%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--foreground) 12%, transparent);
+  }
+
+  /* compact variant (card CTAs) */
+  .outline-btn--sm {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+}
+
+/* ---------- Solid brand CTA (green pill, hero primary action) ---------- */
+@layer components {
+  .brand-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.85rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: color-mix(in srgb, var(--color-status-up) 86%, white);
+    color: color-mix(in srgb, var(--color-status-up) 14%, #020617);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--color-status-up) 75%, transparent);
+    transition:
+      background-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.15s ease;
+  }
+
+  .brand-btn:hover {
+    background-color: color-mix(in srgb, var(--color-status-up) 70%, white);
+    box-shadow: 0 16px 44px -12px color-mix(in srgb, var(--color-status-up) 90%, transparent);
+  }
+
+  .brand-btn:active {
+    transform: scale(0.97);
+  }
+}
+
 /* ---------- Enterprise CTA band (dark) ---------- */
 @layer components {
   .enterprise-cta {
@@ -275,6 +359,141 @@
     .collaborate__grid {
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
+    }
+  }
+}
+
+/* ---------- Feature landing (shared by /integrations etc.) ---------- */
+@layer components {
+  .fl {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background);
+    padding: 6rem 1rem 7rem;
+    text-align: center;
+  }
+
+  .fl__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 52rem;
+    margin: 0 auto;
+  }
+
+  .fl__eyebrow {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-brand-blue);
+  }
+
+  .fl__title {
+    margin-top: 1rem;
+    font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+  }
+
+  .fl__title-accent {
+    display: block;
+    background-image: var(--background-image-brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .fl__desc {
+    max-width: 36rem;
+    margin: 1.75rem auto 0;
+    color: var(--muted);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .fl__grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 64rem;
+    margin: 4rem auto 0;
+    text-align: left;
+  }
+
+  .fl-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(
+          140deg,
+          color-mix(in srgb, var(--color-brand-blue) 40%, transparent),
+          transparent 45%,
+          transparent 60%,
+          color-mix(in srgb, var(--color-brand-magenta) 35%, transparent)
+        )
+        border-box;
+    padding: 1.75rem;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.04) inset,
+      0 24px 48px -32px color-mix(in srgb, var(--color-brand-purple) 45%, transparent);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .fl-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.06) inset,
+      0 32px 60px -30px color-mix(in srgb, var(--color-brand-purple) 70%, transparent);
+  }
+
+  .fl-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 0.875rem;
+    background: var(--background-image-brand-gradient);
+    color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1;
+    box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--color-brand-purple) 80%, transparent);
+  }
+
+  .fl-card__title {
+    margin-top: 1.25rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  .fl-card__desc {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 640px) {
+    .fl__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fl {
+      padding: 7.5rem 1rem 8.5rem;
+    }
+
+    .fl__grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -406,4 +625,20 @@
     }
   }
 }
-
+@layer components {
+  .third-party-visual-glow {
+    background:
+      radial-gradient(
+        ellipse at 32% 35%,
+        color-mix(in srgb, var(--color-brand-blue) 32%, transparent) 0%,
+        color-mix(in srgb, var(--color-brand-purple) 18%, transparent) 44%,
+        transparent 74%
+      ),
+      radial-gradient(
+        ellipse at 65% 62%,
+        color-mix(in srgb, var(--color-brand-magenta) 16%, transparent) 0%,
+        transparent 68%
+      );
+    filter: blur(2.25rem);
+  }
+}

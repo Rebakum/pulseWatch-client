@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@/components/common/ThemeProvider/ThemeProvider';
+import { env } from '@/config/env';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
@@ -15,6 +16,7 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
   title: {
     default: 'PulseWatch — Every Check. Every Pulse. Always Aware.',
     template: '%s · PulseWatch',

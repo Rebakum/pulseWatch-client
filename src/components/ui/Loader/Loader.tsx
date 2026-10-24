@@ -13,13 +13,13 @@ export function Loader() {
     <div
       role="status"
       aria-live="polite"
-      className="flex min-h-screen items-center justify-center bg-[#008080]"
+      className="flex min-h-screen items-center justify-center bg-[var(--background)] text-[var(--foreground)]"
     >
       <div className="relative flex">
         {LOADER_BAR_DELAYS.map((delayClass) => (
           <span
             key={delayClass}
-            className={`mx-5 h-[300px] w-[50px] animate-loader-bar bg-[#008080] ${delayClass}`}
+            className={`mx-5 h-[300px] w-[50px] animate-loader-bar bg-[var(--color-brand-blue)] ${delayClass}`}
           />
         ))}
       </div>

@@ -1,3 +1,4 @@
+import Container from '@/components/common/Container';
 import { Activity, ArrowRight, Check, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
@@ -5,7 +6,7 @@ const assurances = ['Contractual SLA', 'SSO & audit logs', 'SOC 2'];
 
 export default function EnterpriseHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
+    <section className="relative isolate overflow-hidden dark bg-[var(--background)] py-10 text-[var(--foreground)]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -14,7 +15,7 @@ export default function EnterpriseHero() {
         <div className="absolute -bottom-60 -left-40 h-[28rem] w-[28rem] rounded-full bg-brand-blue/10 blur-[120px]" />
       </div>
 
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col items-start">
             <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
@@ -153,7 +154,7 @@ export default function EnterpriseHero() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Container from '@/components/common/Container';
 import Image from 'next/image';
 
 import { awards } from './Awards';
@@ -6,11 +7,11 @@ import FeatureCard from './FeatureCard';
 
 export default function FeaturesGrid() {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-16 text-[var(--foreground)] sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <Container className="relative">
         <h2 className="mx-auto mb-12 max-w-2xl text-center text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
           {content.titleStart}
           <span className="bg-brand-gradient box-decoration-clone bg-clip-text text-transparent">
@@ -41,7 +42,7 @@ export default function FeaturesGrid() {
             ))}
           </ul>
         )}
-      </div>
+      </Container>
     </section>
   );
 }

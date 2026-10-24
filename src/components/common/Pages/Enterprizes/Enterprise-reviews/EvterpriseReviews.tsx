@@ -1,3 +1,4 @@
+import Container from '@/components/common/Container';
 import { TrendingUp } from 'lucide-react';
 
 import ReviewsCarousel from './ReviewsCarousel';
@@ -10,7 +11,7 @@ export default function EnterpriseReviews({ brandName = 'PulseWatch' }: { brandN
   if (reviews.length === 0) return null;
 
   return (
-    <section className="relative overflow-hidden bg-[var(--surface)] py-16 text-[var(--foreground)] sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[var(--surface)] py-10 text-[var(--foreground)]">
       {/* Shared star gradient */}
       <svg width="0" height="0" className="absolute" aria-hidden>
         <defs>
@@ -25,7 +26,7 @@ export default function EnterpriseReviews({ brandName = 'PulseWatch' }: { brandN
       <div className="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-brand-gradient opacity-10 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[28rem] w-[28rem] rounded-full bg-brand-gradient opacity-10 blur-3xl" />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <Container className="relative">
         <div className="mx-auto mb-12 w-full max-w-3xl text-center">
           {/* Premium badge */}
           <span className="rv-badge mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--background)]/70 px-4 py-1.5 text-xs font-semibold text-[var(--muted)] shadow-sm backdrop-blur">
@@ -49,7 +50,7 @@ export default function EnterpriseReviews({ brandName = 'PulseWatch' }: { brandN
 
         {/* Auto-play infinite-loop carousel */}
         <ReviewsCarousel reviews={reviews} />
-      </div>
+      </Container>
     </section>
   );
 }

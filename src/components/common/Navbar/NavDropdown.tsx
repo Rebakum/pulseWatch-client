@@ -47,7 +47,7 @@ const NavDropdownLink = ({ link, onClose }: NavDropdownLinkProps) => {
   const rowClasses = [
     'flex w-full items-center justify-between gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-[15px] font-medium transition-colors',
     link.isComingSoon
-      ? 'cursor-not-allowed text-[var(--muted)] opacity-60'
+      ? 'pointer-events-none cursor-not-allowed text-[var(--muted)] opacity-60'
       : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue dark:hover:text-[color:color-mix(in_oklab,var(--color-brand-blue)_75%,white)]',
   ].join(' ');
 

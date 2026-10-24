@@ -1,10 +1,12 @@
+import Container from '@/components/common/Container';
+
 import CollaborateIllustration from './CollaborateIllustration';
 import { content } from './Content';
 
 export default function Collaborate() {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-16 text-[var(--foreground)] sm:py-20 lg:py-24">
-      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
+      <Container className="relative">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
             <h2 className="mb-6 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
@@ -22,7 +24,7 @@ export default function Collaborate() {
 
           <CollaborateIllustration />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Container from '@/components/common/Container';
 import ShaderButton from '@/components/shader-button/ShaderButton';
 import { content } from './Content ';
 
@@ -5,11 +6,11 @@ export default function ComparisonTable({ brandName = 'PulseWatch' }: { brandNam
   const { competitors, rows } = content;
 
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
+    <section className="relative overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/3 h-96 w-full max-w-7xl -translate-x-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container className="relative">
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <h2 className="mb-5 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -97,7 +98,7 @@ export default function ComparisonTable({ brandName = 'PulseWatch' }: { brandNam
         <div className="mt-8 flex justify-center">
           <ShaderButton className="px-7 py-3.5 text-sm">{content.cta}</ShaderButton>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

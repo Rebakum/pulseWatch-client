@@ -1,13 +1,14 @@
+import Container from '@/components/common/Container';
 import { Check } from 'lucide-react';
 import { content } from './Content';
 
 export default function EnterpriseReady() {
   return (
-    <section className="relative overflow-hidden dark bg-[var(--background)] py-10 text-[var(--foreground)] md:py-16">
+    <section className="relative overflow-hidden dark bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Background ambient glow (same as Hero) */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-gradient opacity-10 blur-[120px]" />
 
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="relative grid gap-12 md:grid-cols-2 md:gap-16">
           {/* Left: heading + checklist */}
           <div>
@@ -50,7 +51,7 @@ export default function EnterpriseReady() {
             ))}
           </dl>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

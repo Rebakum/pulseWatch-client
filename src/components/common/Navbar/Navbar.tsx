@@ -1,5 +1,6 @@
 'use client';
 
+import Container from '@/components/common/Container';
 import { Logo } from '@/components/common/Logo/Logo';
 import { NavDropdown } from '@/components/common/Navbar/NavDropdown';
 import { ThemeToggle } from '@/components/common/ThemeToggle/ThemeToggle';
@@ -101,7 +102,7 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full pt-[5px] pb-0">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className={barClasses}>
           <nav
             aria-label="Main"
@@ -233,7 +234,7 @@ export const Navbar = () => {
                                   const linkClasses = [
                                     'flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors',
                                     link.isComingSoon
-                                      ? 'cursor-not-allowed text-[var(--muted)] opacity-60'
+                                      ? 'pointer-events-none cursor-not-allowed text-[var(--muted)] opacity-60'
                                       : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue',
                                   ].join(' ');
 
@@ -300,7 +301,7 @@ export const Navbar = () => {
             </div>
           </div>
         ) : null}
-      </div>
+      </Container>
     </header>
   );
 };

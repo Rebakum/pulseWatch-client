@@ -85,7 +85,7 @@ export const Sidebar = ({ className, onNavigate }: SidebarProps) => {
         aria-controls="mobile-sidebar"
         onClick={() => setIsNavOpen((open) => !open)}
         className={[
-          'fixed left-3 top-3 z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm md:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200',
+          'fixed left-3 top-3 z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] shadow-sm md:hidden',
           className ?? '',
         ].join(' ')}
       >
@@ -94,7 +94,7 @@ export const Sidebar = ({ className, onNavigate }: SidebarProps) => {
 
       <aside
         className={[
-          'fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 md:flex',
+          'fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-[var(--border)] bg-[var(--surface)] p-4 text-[var(--foreground)] md:flex',
           className ?? '',
         ].join(' ')}
       >
@@ -102,7 +102,7 @@ export const Sidebar = ({ className, onNavigate }: SidebarProps) => {
         <nav aria-label="Dashboard">
           <NavList pathname={pathname} onNavigate={onNavigate} />
         </nav>
-        <p className="mt-auto px-2 text-xs text-slate-400 dark:text-slate-500">
+        <p className="mt-auto px-2 text-xs text-[var(--muted)]">
           Every Check. Every Pulse. Always Aware.
         </p>
       </aside>
@@ -115,7 +115,7 @@ export const Sidebar = ({ className, onNavigate }: SidebarProps) => {
             onClick={closeNav}
             className="absolute inset-0 cursor-default bg-slate-900/50"
           />
-          <aside className="absolute inset-y-0 left-0 flex w-64 flex-col border-r border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+          <aside className="absolute inset-y-0 left-0 flex w-64 flex-col border-r border-[var(--border)] bg-[var(--surface)] p-4 text-[var(--foreground)]">
             <SidebarBrand />
             <nav aria-label="Dashboard (mobile)">
               <NavList pathname={pathname} onNavigate={closeNav} />

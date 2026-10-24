@@ -1,5 +1,4 @@
 import AdvancedFeatures from '@/components/common/Pages/Enterprizes/Advanced-features/AdvancedFeatures';
-import ApiSection from '@/components/common/Pages/Enterprizes/ApiSection/ApiSection';
 import Collaborate from '@/components/common/Pages/Enterprizes/Collaborate/Collaborate';
 import ComparisonTable from '@/components/common/Pages/Enterprizes/Comparison/ComparisonTable';
 import CostComparison from '@/components/common/Pages/Enterprizes/CostComparison/CostComparison';
@@ -10,7 +9,6 @@ import EnterpriseReady from '@/components/common/Pages/Enterprizes/Enterpriserea
 import EnterpriseFaq from '@/components/common/Pages/Enterprizes/Faq/FaqSection';
 import FeaturesGrid from '@/components/common/Pages/Enterprizes/Features-grid/FeaturesGrid';
 import IntegrationsSection from '@/components/common/Pages/Enterprizes/Integrations-section/IntegrationsSection';
-import SavingsCalculator from '@/components/common/Pages/Enterprizes/SavingsCalculator/SavingsCalculator';
 import StatusPages from '@/components/common/Pages/Enterprizes/Status-pages/StatusPages';
 import TrustedBy from '@/components/common/Pages/Enterprizes/TrustedBy/Trustedby ';
 
@@ -20,19 +18,16 @@ export default function EnterprisePage() {
       <EnterpriseHero />
       <TrustedBy />
       <CostComparison />
-      <ComparisonTable />
-      <SavingsCalculator />
       <EnterpriseReady />
+      <ComparisonTable />
       <AdvancedFeatures />
       <StatusPages />
-      <ApiSection />
       <IntegrationsSection />
-      <Collaborate />
-
-      <EnterpriseCta />
       <FeaturesGrid />
+      <Collaborate />
       <EnterpriseReviews />
       <EnterpriseFaq />
+      <EnterpriseCta />
     </>
   );
 }
