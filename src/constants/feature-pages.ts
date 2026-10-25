@@ -54,8 +54,8 @@ export const FEATURE_PAGES: Record<string, FeatureLandingPage> = {
           title: 'Downtimes happen. Get notified with',
           highlight: 'website monitoring.',
           description:
-            "Don't be the last one to notice that your website is down. Try PulseWatch — the world's leading website monitoring service!",
-          cta: { label: 'Start monitoring for free', href: '/website-monitoring' },
+            'Monitor websites and endpoints, track uptime, and get alerted when a check fails—before customers report a problem.',
+          cta: { label: 'Start monitoring for free', href: '/register' },
         },
       },
       {
@@ -150,7 +150,7 @@ export const FEATURE_PAGES: Record<string, FeatureLandingPage> = {
         data: {
           title: [
             { text: 'Know more than just ' },
-            { text: 'up', tone: 'green' },
+            { text: 'up', tone: 'up' },
             { text: ' or ' },
             { text: 'down', tone: 'red' },
             { text: '.' },
@@ -222,6 +222,39 @@ export const FEATURE_PAGES: Record<string, FeatureLandingPage> = {
               headline: 'PulseWatch: The Ultimate Solution for Website Monitoring',
               body: "I recently started using PulseWatch, and I have to say, I'm impressed. It's incredibly easy to set up, and the interface is user-friendly. The real-time monitoring and instant alerts have been a lifesaver, ensuring that my website and servers stay online and any issues are addressed promptly. The detailed reports and performance insights are a great bonus…",
               source: 'Trustpilot.com',
+            },
+          ],
+        },
+      },
+      {
+        type: 'faq',
+        data: {
+          title: 'Website monitoring FAQs',
+          items: [
+            {
+              question: 'What can I monitor with PulseWatch?',
+              answer:
+                'Monitor websites, APIs, servers, ports, DNS records, and cron jobs from one place.',
+            },
+            {
+              question: 'How often are website checks performed?',
+              answer:
+                'Website monitors can run at intervals as short as 30 seconds, so failures can be detected quickly.',
+            },
+            {
+              question: 'How will I know when a check fails?',
+              answer:
+                'Choose alert channels such as email, SMS, voice calls, or connected integrations so the right people can respond.',
+            },
+            {
+              question: 'Can I check availability from multiple regions?',
+              answer:
+                'Yes. Choose monitoring regions and verify availability from multiple locations to help distinguish a local network issue from a wider outage.',
+            },
+            {
+              question: 'How do I get started?',
+              answer:
+                'Create an account, add the website or endpoint you want to monitor, and choose how often it should be checked.',
             },
           ],
         },

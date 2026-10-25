@@ -2,7 +2,7 @@ import type { HeadingSegment } from '@/types/landing';
 import { Fragment } from 'react';
 
 const TONE_CLASS: Record<NonNullable<HeadingSegment['tone']>, string> = {
-  green: 'text-[var(--color-status-up)]',
+  up: 'text-[var(--color-status-up)]',
   red: 'text-[var(--color-status-down)]',
   brand: 'bg-brand-gradient bg-clip-text text-transparent',
 };

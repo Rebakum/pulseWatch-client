@@ -39,7 +39,7 @@ const tiles: Tile[] = [
     x: 84,
     y: 51,
     icon: (
-      <span className="grid size-6 place-items-center rounded-sm bg-lime-600 text-xs font-bold text-white">
+      <span className="grid size-6 place-items-center rounded-sm bg-brand-blue text-xs font-bold text-white">
         &gt;
       </span>
     ),
@@ -75,13 +75,13 @@ const tiles: Tile[] = [
   {
     x: 61,
     y: 93,
-    icon: <Glyph className="font-mono text-xl tracking-tighter text-emerald-400">pd</Glyph>,
+    icon: <Glyph className="font-mono text-xl tracking-tighter text-brand-blue-light">pd</Glyph>,
   },
   {
     x: 84,
     y: 116,
     icon: (
-      <span className="grid size-6 place-items-center rounded-full bg-emerald-300/80 text-[10px] font-bold text-emerald-950">
+      <span className="grid size-6 place-items-center rounded-full bg-brand-blue-light/80 text-[10px] font-bold text-white">
         ▮●
       </span>
     ),
@@ -100,7 +100,7 @@ const tiles: Tile[] = [
     x: 39,
     y: 176,
     icon: (
-      <svg viewBox="0 0 24 24" className="size-5 text-emerald-500" fill="currentColor">
+      <svg viewBox="0 0 24 24" className="size-5 text-brand-blue" fill="currentColor">
         <path d="M4 4h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z" />
       </svg>
     ),
@@ -140,9 +140,9 @@ export function IntegrationsVisual() {
       >
         <defs>
           <linearGradient id="curve" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#34d399" stopOpacity="0" />
-            <stop offset="0.45" stopColor="#34d399" stopOpacity="0.7" />
-            <stop offset="1" stopColor="#6ee7b7" stopOpacity="1" />
+            <stop offset="0" stopColor="#4a9fe0" stopOpacity="0" />
+            <stop offset="0.45" stopColor="#4a9fe0" stopOpacity="0.7" />
+            <stop offset="1" stopColor="#79bff0" stopOpacity="1" />
           </linearGradient>
           <filter id="glow" x="-10%" y="-50%" width="120%" height="200%">
             <feGaussianBlur stdDeviation="4" />
@@ -151,7 +151,7 @@ export function IntegrationsVisual() {
         <path
           d="M0 140 C70 138 150 128 190 142 C230 158 255 158 292 122 C330 86 372 70 410 58 L447 58"
           fill="none"
-          stroke="#34d399"
+          stroke="#4a9fe0"
           strokeOpacity="0.5"
           strokeWidth="5"
           filter="url(#glow)"

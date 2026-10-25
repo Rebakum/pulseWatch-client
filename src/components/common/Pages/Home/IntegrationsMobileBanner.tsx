@@ -104,7 +104,7 @@ const tiles: Tile[] = [
     x: 84,
     y: 51,
     icon: (
-      <span className="grid size-6 place-items-center rounded-sm bg-lime-600 text-xs font-bold text-white">
+      <span className="grid size-6 place-items-center rounded-sm bg-brand-blue text-xs font-bold text-white">
         &gt;
       </span>
     ),
@@ -140,13 +140,13 @@ const tiles: Tile[] = [
   {
     x: 61,
     y: 93,
-    icon: <Glyph className="font-mono text-xl tracking-tighter text-emerald-400">pd</Glyph>,
+    icon: <Glyph className="font-mono text-xl tracking-tighter text-brand-blue-light">pd</Glyph>,
   },
   {
     x: 84,
     y: 116,
     icon: (
-      <span className="grid size-6 place-items-center rounded-full bg-emerald-300/80 text-[10px] font-bold text-emerald-950">
+      <span className="grid size-6 place-items-center rounded-full bg-brand-blue-light/80 text-[10px] font-bold text-white">
         ▮●
       </span>
     ),
@@ -165,7 +165,7 @@ const tiles: Tile[] = [
     x: 39,
     y: 176,
     icon: (
-      <svg viewBox="0 0 24 24" className="size-5 text-emerald-500" fill="currentColor">
+      <svg viewBox="0 0 24 24" className="size-5 text-brand-blue" fill="currentColor">
         <path d="M4 4h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z" />
       </svg>
     ),
@@ -207,9 +207,9 @@ function IntegrationsVisual() {
       >
         <defs>
           <linearGradient id="curve" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#34d399" stopOpacity="0" />
-            <stop offset="0.45" stopColor="#34d399" stopOpacity="0.7" />
-            <stop offset="1" stopColor="#6ee7b7" stopOpacity="1" />
+            <stop offset="0" stopColor="#4a9fe0" stopOpacity="0" />
+            <stop offset="0.45" stopColor="#4a9fe0" stopOpacity="0.7" />
+            <stop offset="1" stopColor="#79bff0" stopOpacity="1" />
           </linearGradient>
           <filter id="glow" x="-10%" y="-50%" width="120%" height="200%">
             <feGaussianBlur stdDeviation="4" />
@@ -218,7 +218,7 @@ function IntegrationsVisual() {
         <path
           d="M0 140 C70 138 150 128 190 142 C230 158 255 158 292 122 C330 86 372 70 410 58 L447 58"
           fill="none"
-          stroke="#34d399"
+          stroke="#4a9fe0"
           strokeOpacity="0.5"
           strokeWidth="5"
           filter="url(#glow)"
@@ -258,7 +258,7 @@ function StoreBadge({ children, className }: { children: ReactNode; className: s
 function UpCircle({ size = 'size-12' }: { size?: string }) {
   return (
     <span
-      className={`grid ${size} place-items-center rounded-full bg-emerald-400/10 ring-1 ring-emerald-400/30`}
+      className={`grid ${size} place-items-center rounded-full bg-brand-blue-light/10 ring-1 ring-brand-blue-light/30`}
     >
       <span className="grid size-2/3 place-items-center rounded-full bg-[var(--color-status-up)] text-white">
         <svg
@@ -304,7 +304,7 @@ function MobileVisual() {
             <path d="M8 18l7-12M9 6l8 12M5 14h14" />
           </svg>
         </StoreBadge>
-        <StoreBadge className="bg-transparent text-emerald-400">
+        <StoreBadge className="bg-transparent text-brand-blue-light">
           <svg viewBox="0 0 24 24" className="size-7" fill="currentColor">
             <path d="M5 3l14 9-14 9z" />
           </svg>
@@ -321,7 +321,7 @@ function MobileVisual() {
 
         <div className="mt-3 flex items-center justify-between px-4">
           <span className="flex items-center gap-1.5 text-[11px] font-semibold text-[var(--foreground)]">
-            <i className="size-1.5 rounded-full bg-emerald-400" />
+            <i className="size-1.5 rounded-full bg-brand-blue-light" />
             {BRAND}
           </span>
           <span className="grid size-5 place-items-center rounded-md border border-[var(--border)] text-[8px] text-slate-400">
@@ -365,7 +365,7 @@ function MobileVisual() {
             <UpCircle size="size-9" />
             <div className="flex-1 space-y-1">
               <StatRow color="bg-rose-500" label="Down" value={0} />
-              <StatRow color="bg-emerald-400" label="Up" value={6} />
+              <StatRow color="bg-brand-blue-light" label="Up" value={6} />
               <StatRow color="bg-slate-500" label="Paused" value={1} />
             </div>
           </div>
@@ -373,7 +373,7 @@ function MobileVisual() {
             <span>
               Latest alert · <span className="text-slate-300">example.com</span>
             </span>
-            <i className="size-1.5 rounded-full bg-emerald-400" />
+            <i className="size-1.5 rounded-full bg-brand-blue-light" />
           </div>
         </div>
 

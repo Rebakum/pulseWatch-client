@@ -12,13 +12,13 @@
  *   | { type: 'spotlightRows'; data: SpotlightRowsSectionData }
  *   | { type: 'testimonials'; data: TestimonialsSectionData }
  *   | { type: 'articleCards'; data: ArticleCardsSectionData }
+ *   | { type: 'faq'; data: FaqSectionData }
  *
  * To add a section type:
  *   1. Define its data interface and add a `| { type: '…'; data: … }` union member.
- *   2. Create the server component under
- *      `src/components/common/Pages/Landing/sections/`.
+ *   2. Create the section component under the relevant feature landing directory.
  *   3. Register it in `SECTION_COMPONENTS` and the `renderSection` switch inside
- *      `LandingPage.tsx` (the `satisfies` map and `never` guard produce a
+ *      `WebsiteMonitoring.tsx` (the `satisfies` map and `never` guard produce a
  *      compile error until you do).
  */
 
@@ -28,7 +28,7 @@
  */
 export interface HeadingSegment {
   text: string;
-  tone?: 'green' | 'red' | 'brand';
+  tone?: 'up' | 'red' | 'brand';
 }
 
 export interface HeroSectionData {
@@ -103,8 +103,8 @@ export type SpotlightVisual = 'statusPage' | 'teamInvite' | 'alertingStack';
 export interface SpotlightCta {
   label: string;
   href: string;
-  /** `light` renders the white hairline variant; defaults to the green outline. */
-  variant?: 'green' | 'light';
+  /** `light` renders the white hairline variant; defaults to the brand-blue outline. */
+  variant?: 'brand' | 'light';
   /** Appends a chevron (used by the "Check LIVE demo" style CTA). */
   arrow?: boolean;
 }
@@ -149,6 +149,16 @@ export interface ArticleCardsSectionData {
   items: ArticleCardItem[];
 }
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FaqSectionData {
+  title: string;
+  items: FaqItem[];
+}
+
 export type LandingSection =
   | { type: 'hero'; data: HeroSectionData }
   | { type: 'featureRows'; data: FeatureRowsSectionData }
@@ -157,6 +167,7 @@ export type LandingSection =
   | { type: 'advancedFeatures'; data: AdvancedFeaturesSectionData }
   | { type: 'spotlightRows'; data: SpotlightRowsSectionData }
   | { type: 'testimonials'; data: TestimonialsSectionData }
-  | { type: 'articleCards'; data: ArticleCardsSectionData };
+  | { type: 'articleCards'; data: ArticleCardsSectionData }
+  | { type: 'faq'; data: FaqSectionData };
 
 export type LandingSectionType = LandingSection['type'];

@@ -3,6 +3,7 @@ import type { ComponentType } from 'react';
 import AdvancedFeatures from './sections/AdvancedFeatures';
 import ArticleCards from './sections/ArticleCards';
 import FeatureRows from './sections/FeatureRows';
+import FaqSection from './sections/FaqSection';
 import HeroSection from './sections/HeroSection';
 import IconCards from './sections/IconCards';
 import SetupShowcase from './sections/SetupShowcase';
@@ -29,6 +30,7 @@ const SECTION_COMPONENTS = {
   spotlightRows: SpotlightRows,
   testimonials: Testimonials,
   articleCards: ArticleCards,
+  faq: FaqSection,
 } satisfies SectionComponentMap;
 
 interface LandingPageProps {
@@ -71,6 +73,10 @@ const renderSection = (section: LandingSection, index: number) => {
     }
     case 'articleCards': {
       const SectionComponent = SECTION_COMPONENTS.articleCards;
+      return <SectionComponent key={index} data={section.data} />;
+    }
+    case 'faq': {
+      const SectionComponent = SECTION_COMPONENTS.faq;
       return <SectionComponent key={index} data={section.data} />;
     }
     default: {

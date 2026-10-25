@@ -85,8 +85,8 @@ export default function EnterpriseHero() {
                     <p className="mt-0.5 text-xs text-[var(--muted)]">Live monitoring overview</p>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-blue/20 bg-brand-blue/10 px-2.5 py-1 text-xs font-medium text-brand-blue dark:text-brand-blue-light">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-blue" />
                   Operational
                 </span>
               </div>

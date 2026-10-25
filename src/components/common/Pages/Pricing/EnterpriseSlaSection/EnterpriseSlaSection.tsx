@@ -13,7 +13,7 @@ export default function EnterpriseSlaSection() {
           {/* Rating Score */}
           <div className="flex items-center gap-2 text-left">
             <span className="text-2xl font-bold tracking-tight">4.7</span>
-            <Star className="w-5 h-5 fill-emerald-500 text-emerald-500" />
+            <Star className="w-5 h-5 fill-brand-blue text-brand-blue" />
             <div className="text-xs text-[var(--muted)] leading-tight">stars out of 5</div>
           </div>
 

@@ -25,7 +25,7 @@ export default function ForgotPassword() {
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] flex flex-col justify-center items-center px-4 font-sans selection:bg-[var(--color-brand-blue)] selection:text-white">
       {/* Brand Logo with Status Indicator */}
       <div className="flex items-center space-x-2.5 mb-10">
-        <span className="h-3.5 w-3.5 rounded-full bg-[var(--color-status-up)] shadow-[0_0_12px_rgba(22,163,74,0.6)] animate-pulse"></span>
+        <span className="h-3.5 w-3.5 rounded-full bg-[var(--color-status-up)] shadow-[0_0_12px_rgba(18,121,193,0.6)] animate-pulse"></span>
         <span className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
           CodesRaft
         </span>

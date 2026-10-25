@@ -96,7 +96,7 @@ export default function ThirdPartyMonitoringHero() {
 
           <ShaderButton
             href="/register"
-            className="!inline-flex !min-h-12 !items-center !justify-center !gap-2 !rounded-full !px-6 !py-3 !font-medium !text-[#06210f] !shadow-[0_5px_22px_rgba(52,213,122,0.22)]"
+            className="!inline-flex !min-h-12 !items-center !justify-center !gap-2 !rounded-full !px-6 !py-3 !font-medium"
           >
             Start monitoring Third Party services
             <ArrowRight size={18} aria-hidden="true" />

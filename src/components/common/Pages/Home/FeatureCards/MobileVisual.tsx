@@ -11,7 +11,7 @@ function StoreBadge({ children, className }: { children: ReactNode; className: s
 function UpCircle({ size = 'size-12' }: { size?: string }) {
   return (
     <span
-      className={`grid ${size} place-items-center rounded-full bg-emerald-400/10 ring-1 ring-emerald-400/30`}
+      className={`grid ${size} place-items-center rounded-full bg-brand-blue-light/10 ring-1 ring-brand-blue-light/30`}
     >
       <span className="grid size-2/3 place-items-center rounded-full bg-[var(--color-status-up)] text-white">
         <svg
@@ -56,7 +56,7 @@ export function MobileVisual() {
             <path d="M8 18l7-12M9 6l8 12M5 14h14" />
           </svg>
         </StoreBadge>
-        <StoreBadge className="bg-transparent text-emerald-400">
+        <StoreBadge className="bg-transparent text-brand-blue-light">
           <svg viewBox="0 0 24 24" className="size-7" fill="currentColor">
             <path d="M5 3l14 9-14 9z" />
           </svg>
@@ -72,7 +72,7 @@ export function MobileVisual() {
 
         <div className="mt-3 flex items-center justify-between px-4">
           <span className="flex items-center gap-1.5 text-[11px] font-semibold text-[var(--foreground)]">
-            <i className="size-1.5 rounded-full bg-emerald-400" />
+            <i className="size-1.5 rounded-full bg-brand-blue-light" />
             {BRAND}
           </span>
           <span className="grid size-5 place-items-center rounded-md border border-[var(--border)] text-[8px] text-slate-400">
@@ -115,7 +115,7 @@ export function MobileVisual() {
             <UpCircle size="size-9" />
             <div className="flex-1 space-y-1">
               <StatRow color="bg-rose-500" label="Down" value={0} />
-              <StatRow color="bg-emerald-400" label="Up" value={6} />
+              <StatRow color="bg-brand-blue-light" label="Up" value={6} />
               <StatRow color="bg-slate-500" label="Paused" value={1} />
             </div>
           </div>
@@ -123,7 +123,7 @@ export function MobileVisual() {
             <span>
               Latest alert · <span className="text-slate-300">example.com</span>
             </span>
-            <i className="size-1.5 rounded-full bg-emerald-400" />
+            <i className="size-1.5 rounded-full bg-brand-blue-light" />
           </div>
         </div>
 
