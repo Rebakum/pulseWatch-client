@@ -57,6 +57,7 @@ export interface FeatureRowsSectionData {
 }
 
 export type IconCardIcon =
+  | 'website'
   | 'keyword'
   | 'ping'
   | 'port'

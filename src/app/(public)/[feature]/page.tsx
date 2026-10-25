@@ -1,4 +1,5 @@
 import FeatureLanding from '@/components/common/Pages/FeatureLanding/FeatureLanding';
+import KeywordMonitoringPage from '@/components/common/Pages/FeatureLanding/KeywordMonitoring/KeywordMonitoringPage';
 import ThirdPartyMonitoringPage from '@/components/common/Pages/FeatureLanding/ThirdPartyMonitoring/ThirdPartyMonitoringPage';
 import LandingPage from '@/components/common/Pages/FeatureLanding/WebsiteMonitoring/WebsiteMonitoring';
 import { ROOT_PAGE_SLUGS, findRootPage } from '@/constants/page-registry';
@@ -37,6 +38,10 @@ function FeaturePageContent({ params }: FeaturePageProps) {
 
   if (!page) {
     notFound();
+  }
+
+  if (feature === 'keyword-monitoring') {
+    return <KeywordMonitoringPage />;
   }
 
   if (feature === 'third-party-monitoring') {

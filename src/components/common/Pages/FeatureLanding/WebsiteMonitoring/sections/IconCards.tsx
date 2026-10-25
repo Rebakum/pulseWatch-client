@@ -7,6 +7,7 @@ import {
   Globe,
   KeyRound,
   List,
+  Monitor,
   Network,
   Puzzle,
   Radio,
@@ -18,6 +19,7 @@ import type { LucideIcon } from 'lucide-react';
 import SplitHeader from './SplitHeader';
 
 const ICONS: Record<IconCardIcon, LucideIcon> = {
+  website: Monitor,
   keyword: KeyRound,
   ping: Target,
   port: Network,
