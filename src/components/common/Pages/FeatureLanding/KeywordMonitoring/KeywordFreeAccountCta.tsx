@@ -1,5 +1,5 @@
+import ShaderButton from '@/components/shader-button/ShaderButton';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function KeywordFreeAccountCta() {
   return (
@@ -27,22 +27,14 @@ export default function KeywordFreeAccountCta() {
               </span>
             </div>
           </div>
-
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-8">
             Get your FREE account now, 50 monitors included!
           </h2>
-
           {/* Primary CTA */}
-          <Link
-            href="/register"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-colors hover:bg-emerald-400"
-          >
-            Start monitoring in 30 seconds
-          </Link>
 
+          <ShaderButton href="/register">Start monitoring in 30 seconds</ShaderButton>
           <p className="mt-4 text-sm text-[var(--muted)]">No credit card required</p>
-
           {/* Available Also On Section */}
           <div className="mt-12 space-y-4">
             <p className="text-xs sm:text-sm font-medium text-[var(--muted)] uppercase tracking-wider">
