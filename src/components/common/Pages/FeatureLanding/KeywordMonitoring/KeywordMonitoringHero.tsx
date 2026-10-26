@@ -33,7 +33,7 @@ export default function KeywordMonitoringHero() {
     <main className="overflow-x-clip bg-[var(--background)] text-[var(--foreground)]">
       <section
         aria-labelledby="keyword-monitoring-title"
-        className="mx-auto grid w-full max-w-[1240px] grid-cols-1 items-center gap-8 px-5 py-16 sm:px-8 lg:min-h-[660px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 lg:py-12"
+        className="mx-auto grid w-full max-w-[1240px] grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 lg:min-h-[660px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 lg:py-10"
       >
         {/* ---------- Left content ---------- */}
         <div className="relative z-10 min-w-0">

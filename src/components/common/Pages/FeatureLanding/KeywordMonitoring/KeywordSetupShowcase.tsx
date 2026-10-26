@@ -58,7 +58,7 @@ function KeywordSetupMock() {
                 key={label}
                 className={`flex items-center gap-2 rounded-md px-2 py-1.5 text-[11px] ${
                   active
-                    ? 'bg-[var(--color-status-up)]/10 font-semibold text-[var(--color-status-up)]'
+                    ? 'bg-brand-blue/10 font-semibold text-brand-blue'
                     : 'text-[var(--muted)]'
                 }`}
               >
@@ -138,7 +138,7 @@ function KeywordSetupMock() {
             {['2xx', '3xx'].map((code) => (
               <span
                 key={code}
-                className="rounded bg-[var(--color-status-up)]/20 px-1.5 py-0.5 text-[9px] font-semibold text-[var(--color-status-up)]"
+                className="rounded bg-brand-blue/20 px-1.5 py-0.5 text-[9px] font-semibold text-brand-blue"
               >
                 {code}
               </span>

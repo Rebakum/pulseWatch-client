@@ -2,6 +2,7 @@ import FeatureLanding from '@/components/common/Pages/FeatureLanding/FeatureLand
 import KeywordMonitoringPage from '@/components/common/Pages/FeatureLanding/KeywordMonitoring/KeywordMonitoringPage';
 import ThirdPartyMonitoringPage from '@/components/common/Pages/FeatureLanding/ThirdPartyMonitoring/ThirdPartyMonitoringPage';
 import LandingPage from '@/components/common/Pages/FeatureLanding/WebsiteMonitoring/WebsiteMonitoring';
+import PingMonitoringpge from '@/components/common/Pages/PingMonitoring/PingMonitoringpge';
 import { ROOT_PAGE_SLUGS, findRootPage } from '@/constants/page-registry';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -46,6 +47,10 @@ function FeaturePageContent({ params }: FeaturePageProps) {
 
   if (feature === 'third-party-monitoring') {
     return <ThirdPartyMonitoringPage />;
+  }
+
+  if (feature === 'ping-monitoring') {
+    return <PingMonitoringpge />;
   }
 
   if (page.sections && page.sections.length > 0) {

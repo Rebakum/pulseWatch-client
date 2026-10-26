@@ -22,6 +22,7 @@ const ICONS: Record<IconCardIcon, LucideIcon> = {
   website: Monitor,
   keyword: KeyRound,
   ping: Target,
+  packetLoss: Network,
   port: Network,
   cron: Clock,
   dns: List,

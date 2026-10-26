@@ -4,7 +4,7 @@ import IconCards from '../WebsiteMonitoring/sections/IconCards';
 const DATA: IconCardsSectionData = {
   title: [
     { text: 'Know more than just ' },
-    { text: 'up', tone: 'up' },
+    { text: 'up', tone: 'brand' },
     { text: ' or ' },
     { text: 'down', tone: 'red' },
     { text: '.' },

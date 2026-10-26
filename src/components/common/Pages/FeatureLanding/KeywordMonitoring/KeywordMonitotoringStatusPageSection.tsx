@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import ShaderButton from '@/components/shader-button/ShaderButton';
 
 /* Colors: only globals.css tokens
    --background / --surface / --border / --foreground / --muted
@@ -14,7 +15,7 @@ function UptimeBars({ red = [] as number[], dim = false }) {
         <span
           key={i}
           className={`h-4 w-[3px] rounded-[1px] ${
-            red.includes(i) ? 'bg-status-down' : dim ? 'bg-status-up/50' : 'bg-status-up'
+            red.includes(i) ? 'bg-status-down' : dim ? 'bg-brand-blue/50' : 'bg-brand-blue'
           }`}
         />
       ))}
@@ -41,7 +42,7 @@ function StatusPageMockup() {
           {/* header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm font-bold text-[var(--foreground)]">
-              <span className="h-3 w-3 rounded-full bg-status-up" />
+              <span className="h-3 w-3 rounded-full bg-brand-blue" />
               PulseWatch
             </div>
             <div className="flex items-center gap-2">
@@ -62,9 +63,9 @@ function StatusPageMockup() {
             className="-ml-10 mt-1 flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 shadow-xl shadow-black/20 dark:shadow-black/50"
             style={{ transform: 'translateZ(40px)' }}
           >
-            <span className="h-4 w-4 rounded-full bg-status-up" />
+            <span className="h-4 w-4 rounded-full bg-brand-blue" />
             <p className="text-base font-bold text-[var(--foreground)]">
-              All systems <span className="text-status-up">operational</span>
+              All systems <span className="text-brand-blue">operational</span>
             </p>
           </div>
 
@@ -79,10 +80,10 @@ function StatusPageMockup() {
               {statusRows.map((row, i) => (
                 <div key={row.name} className="flex items-center gap-3">
                   <span className="w-[88px] text-[9px] text-[var(--muted)]">{row.name}</span>
-                  <span className="w-12 text-[8px] text-status-up">{row.uptime}</span>
+                  <span className="w-12 text-[8px] text-brand-blue">{row.uptime}</span>
                   <UptimeBars red={row.red} dim={i > 2} />
                   <span className="ml-auto flex items-center gap-1 text-[8px] text-[var(--foreground)]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-status-up" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-blue" />
                     Up
                   </span>
                 </div>
@@ -96,10 +97,10 @@ function StatusPageMockup() {
               {[0, 1].map((r) => (
                 <div key={r} className="flex items-center gap-3">
                   <span className="w-[88px] text-[9px] text-[var(--muted)]">Service {r + 1}</span>
-                  <span className="w-12 text-[8px] text-status-up/70">100.00%</span>
+                  <span className="w-12 text-[8px] text-brand-blue/70">100.00%</span>
                   <UptimeBars dim />
                   <span className="ml-auto flex items-center gap-1 text-[8px] text-[var(--muted)]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-status-up/70" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-blue/70" />
                     Up
                   </span>
                 </div>
@@ -122,7 +123,7 @@ function StatusPageMockup() {
 
 export default function StatusPagesSection() {
   return (
-    <section className="overflow-hidden bg-[var(--background)] py-24 text-[var(--foreground)]">
+    <section className="overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       <div className="mx-auto grid max-w-[1366px] items-center gap-12 px-6 md:px-10 lg:grid-cols-2">
         {/* left copy */}
         <div>
@@ -138,10 +139,10 @@ export default function StatusPagesSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Link href="/status/demo" className="shader-btn">
+            <ShaderButton href="/status/demo">
               Check LIVE demo
               <ChevronRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </ShaderButton>
 
             <Link href="/status-pages" className="outline-btn">
               Explore Status Pages

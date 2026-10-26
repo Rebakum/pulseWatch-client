@@ -8,9 +8,9 @@ import Link from 'next/link';
 
 const monitorRows = [
   { dot: 'bg-status-warning', w: 'w-28' },
-  { dot: 'bg-status-up', w: 'w-32' },
-  { dot: 'bg-status-up', w: 'w-24' },
-  { dot: 'bg-status-up', w: 'w-28' },
+  { dot: 'bg-brand-blue', w: 'w-32' },
+  { dot: 'bg-brand-blue', w: 'w-24' },
+  { dot: 'bg-brand-blue', w: 'w-28' },
   { dot: 'bg-status-warning', w: 'w-32' },
 ];
 
@@ -113,7 +113,7 @@ function InviteMockup() {
 
 export default function TeamMembersSection() {
   return (
-    <section className="bg-[var(--background)] px-4 py-20 text-[var(--foreground)] md:px-6">
+    <section className="bg-[var(--background)] px-4 py-10 text-[var(--foreground)] md:px-6">
       <div className="mx-auto grid max-w-[1340px] items-center overflow-hidden rounded-[40px] border border-[var(--border)] md:rounded-[48px] lg:grid-cols-2">
         {/* left: mockup */}
         <InviteMockup />

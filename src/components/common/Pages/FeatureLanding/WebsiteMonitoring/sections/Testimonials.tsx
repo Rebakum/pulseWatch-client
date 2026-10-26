@@ -20,7 +20,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {data.items.map((item) => (
-            <figure key={item.name} className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+            <figure key={`${item.name}-${item.headline}`} className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
               <div className="flex gap-1" aria-label="5 out of 5 stars">
                 {STARS.map((star) => (
                   <Star

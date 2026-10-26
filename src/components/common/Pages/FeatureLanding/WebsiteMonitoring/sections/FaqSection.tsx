@@ -4,13 +4,14 @@ import { ChevronDown } from 'lucide-react';
 
 interface FaqSectionProps {
   data: FaqSectionData;
+  className?: string;
 }
 
-export default function FaqSection({ data }: FaqSectionProps) {
+export default function FaqSection({ data, className = 'py-14 sm:py-20' }: FaqSectionProps) {
   return (
     <section
       aria-labelledby="website-monitoring-faq-title"
-      className="bg-[var(--background)] py-14 text-[var(--foreground)] sm:py-20"
+      className={`bg-[var(--background)] ${className} text-[var(--foreground)]`}
     >
       <Container>
         <h2

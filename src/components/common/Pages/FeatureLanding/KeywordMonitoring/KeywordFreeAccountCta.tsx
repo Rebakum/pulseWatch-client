@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function KeywordFreeAccountCta() {
   return (
-    <section className="relative isolate w-full overflow-hidden bg-[var(--background)] py-16 text-[var(--foreground)] sm:py-20">
+    <section className="relative isolate w-full overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
       {/* Top brand glow */}
       <div
         aria-hidden

@@ -68,6 +68,7 @@ export type IconCardIcon =
   | 'tcp'
   | 'thirdParty'
   | 'responseTime'
+  | 'packetLoss'
   | 'sslExpiry'
   | 'domainExpiry';
 

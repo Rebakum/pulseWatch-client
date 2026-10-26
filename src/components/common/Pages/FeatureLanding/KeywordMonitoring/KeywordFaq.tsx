@@ -48,5 +48,5 @@ const DATA: FaqSectionData = {
 };
 
 export default function KeywordFaq() {
-  return <FaqSection data={DATA} />;
+  return <FaqSection data={DATA} className="py-10" />;
 }
