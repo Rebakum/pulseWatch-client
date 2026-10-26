@@ -9,8 +9,6 @@ const CARD_TILT =
 const CARD_BASE =
   'relative rounded-[20px] border border-white/[0.09] bg-[linear-gradient(180deg,#19222f,#111823)] shadow-[0_12px_26px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.06)]';
 
-const GREEN_TEXT = 'text-[#22c55e]';
-
 const UPTIME_BARS = Array.from({ length: 32 });
 
 export default function PingMonitoringHero() {
@@ -26,9 +24,15 @@ export default function PingMonitoringHero() {
             id="ping-monitoring-title"
             className="mb-7 text-[clamp(2.5rem,5vw,3.75rem)] font-bold leading-[1.1] tracking-[-0.045em] text-[var(--foreground)]"
           >
-            <span className={GREEN_TEXT}>Ping</span> any device or
+            <span className="bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-transparent">
+              Ping
+            </span>{' '}
+            any device or
             <br />
-            server<span className={GREEN_TEXT}>.</span>
+            server
+            <span className="bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-transparent">
+              .
+            </span>
           </h1>
 
           <p className="mb-8 max-w-[480px] text-base leading-[1.7] text-[var(--muted)] sm:text-lg">
@@ -276,7 +280,7 @@ export default function PingMonitoringHero() {
               <div className="mt-2.5 flex items-center justify-between border-t border-white/[0.07] pt-2 text-[10px]">
                 <div>
                   <div className="flex items-center gap-1.5 font-bold text-white">
-                    <Activity size={12} className="text-[#22c55e]" />
+                    <Activity size={12} className="text-brand-b" />
                     <span className="text-[14px] max-sm:text-[12px]">101.66 ms</span>
                   </div>
                   <span className="text-[9px] text-[#a9b4c4]">Average</span>
@@ -298,7 +302,7 @@ export default function PingMonitoringHero() {
             >
               <div className="flex items-center justify-between text-[11px] max-sm:text-[9.5px]">
                 <span className="font-semibold text-white">Last 24 hours</span>
-                <span className="font-bold text-[#22c55e]">100%</span>
+                <span className="font-bold text-brand-blue">100%</span>
               </div>
 
               {/* Tick bars */}

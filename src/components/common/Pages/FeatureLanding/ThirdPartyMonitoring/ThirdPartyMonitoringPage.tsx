@@ -1,3 +1,4 @@
+import LogoMarquee from '../../Home/LogoMarquee';
 import BringThirdPartySection from './BringThirdPartySection';
 import FaqSection from './FaqSection';
 import IncidentHistorySection from './IncidentHistorySection';
@@ -11,6 +12,7 @@ export default function ThirdPartyMonitoringPage() {
   return (
     <div>
       <ThirdPartyMonitoringHero />
+      <LogoMarquee />
       <ThirdPartyFeatureRows />
       <ThirdPartyMonitoringWorks />
       <WatchWhatMatters />

@@ -2,6 +2,7 @@ import { Activity, ChevronDown, MessageCircle, Radio, Target } from 'lucide-reac
 import Link from 'next/link';
 
 import Container from '@/components/common/Container';
+import ShaderButton from '@/components/shader-button/ShaderButton';
 import SplitHeader from '../FeatureLanding/WebsiteMonitoring/sections/SplitHeader';
 
 const NAV_ITEMS = [
@@ -95,7 +96,7 @@ function PingMonitorMock() {
             <span className="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded bg-brand-blue text-[9px] text-white">
               ✓
             </span>
-            <div>
+            <div className="pb-4">
               <p className="text-[11px] font-semibold">Alert when host is unreachable</p>
               <p className="mt-0.5 text-[9px] leading-relaxed text-[var(--muted)]">
                 Get notified when the device stops responding to ping checks.
@@ -103,12 +104,7 @@ function PingMonitorMock() {
             </div>
           </div>
 
-          <button
-            type="button"
-            className="mt-6 rounded-md bg-brand-blue px-4 py-2 text-[11px] font-semibold text-white"
-          >
-            Create monitor
-          </button>
+          <ShaderButton type="button">Create monitor</ShaderButton>
         </div>
 
         <aside className="hidden border-l border-[var(--border)] p-4 lg:block">

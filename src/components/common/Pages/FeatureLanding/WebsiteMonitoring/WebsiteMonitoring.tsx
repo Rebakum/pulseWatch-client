@@ -1,9 +1,10 @@
 import type { LandingSection, LandingSectionType } from '@/types/landing';
-import type { ComponentType } from 'react';
+import { Fragment, type ComponentType } from 'react';
+import LogoMarquee from '../../Home/LogoMarquee';
 import AdvancedFeatures from './sections/AdvancedFeatures';
 import ArticleCards from './sections/ArticleCards';
-import FeatureRows from './sections/FeatureRows';
 import FaqSection from './sections/FaqSection';
+import FeatureRows from './sections/FeatureRows';
 import HeroSection from './sections/HeroSection';
 import IconCards from './sections/IconCards';
 import SetupShowcase from './sections/SetupShowcase';
@@ -37,15 +38,16 @@ interface LandingPageProps {
   sections: readonly LandingSection[];
 }
 
-/**
- * Narrows each section to its member before rendering. The `never` assignment
- * in the default branch fails the build if a union member has no case here.
- */
 const renderSection = (section: LandingSection, index: number) => {
   switch (section.type) {
     case 'hero': {
       const SectionComponent = SECTION_COMPONENTS.hero;
-      return <SectionComponent key={index} data={section.data} />;
+      return (
+        <Fragment key={index}>
+          <SectionComponent data={section.data} />
+          <LogoMarquee />
+        </Fragment>
+      );
     }
     case 'featureRows': {
       const SectionComponent = SECTION_COMPONENTS.featureRows;

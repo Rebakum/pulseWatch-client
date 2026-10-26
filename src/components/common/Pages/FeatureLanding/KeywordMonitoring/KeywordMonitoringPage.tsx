@@ -1,3 +1,4 @@
+import LogoMarquee from '../../Home/LogoMarquee';
 import KeywordAdvancedFeatures from './KeywordAdvancedFeatures';
 import KeywordArticles from './KeywordArticles';
 import KeywordFaq from './KeywordFaq';
@@ -15,6 +16,7 @@ export default function KeywordMonitoringPage() {
   return (
     <div>
       <KeywordMonitoringHero />
+      <LogoMarquee />
       <KeywordFeatureRows />
       <KeywordSetupShowcase />
       <KeywordAdvancedFeatures />

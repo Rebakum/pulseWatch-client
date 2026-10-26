@@ -1,5 +1,5 @@
-import { createElement } from 'react';
 import type { HTMLAttributes, ReactNode } from 'react';
+import { createElement } from 'react';
 
 interface MarqueeProps extends HTMLAttributes<HTMLElement> {
   direction?: 'left' | 'right';
@@ -9,8 +9,7 @@ interface MarqueeProps extends HTMLAttributes<HTMLElement> {
   children?: ReactNode;
 }
 
-const Marquee = ({ children, ...props }: MarqueeProps) =>
-  createElement('marquee', props, children);
+const Marquee = ({ children, ...props }: MarqueeProps) => createElement('marquee', props, children);
 
 interface LogoBadge {
   name: string;
@@ -40,7 +39,7 @@ const ROW_TWO_LOGOS: LogoBadge[] = [
 ];
 
 const LogoBadgeItem = ({ name, symbol }: LogoBadge) => (
-  <li className="flex shrink-0 items-center gap-2.5 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-bold tracking-wider text-[var(--muted)] shadow-sm transition-colors hover:text-[var(--foreground)] sm:text-base">
+  <li className="flex shrink-0 items-center gap-2.5 rounded-xl  bg-[var(--surface)] px-6 py-3 text-sm font-bold tracking-wider text-[var(--muted)] shadow-sm transition-colors hover:text-[var(--foreground)] sm:text-base">
     <span className="text-lg" aria-hidden="true">
       {symbol}
     </span>
@@ -52,15 +51,15 @@ export default function LogoMarquee() {
   return (
     <section
       aria-labelledby="trusted-by-title"
-      className="border-y border-[var(--border)] bg-[var(--background)] py-10 text-[var(--foreground)]"
+      className=" bg-[var(--background)] py-10 text-[var(--foreground)]"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2
+        {/* <h2
           id="trusted-by-title"
           className="mb-8 text-center text-xs font-semibold tracking-widest text-[var(--muted)] sm:text-sm"
         >
           TRUSTED BY OVER 3,400+ ENGINEERING TEAMS AND GLOBAL ENTERPRISES
-        </h2>
+        </h2> */}
 
         <div className="relative space-y-6 overflow-hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[var(--background)] to-transparent sm:w-24" />

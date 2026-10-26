@@ -1,23 +1,25 @@
-import PingMonitoringHero from './PingMonitoringHero';
-import PingMonitoringSetupShowcase from './PingMonitoringSetupShowcase';
-import {
-  PingMonitoringAdvancedFeatures,
-  PingMonitoringInsightCards,
-  PingMonitoringTypeCards,
-} from './PingMonitoringSections';
+import StatusPagesSection from '../FeatureLanding/KeywordMonitoring/KeywordMonitotoringStatusPageSection';
+import TeamMembersSection from '../FeatureLanding/KeywordMonitoring/TeamMembersSection';
+import LogoMarquee from '../Home/LogoMarquee';
 import {
   PingMonitoringArticles,
   PingMonitoringFaq,
   PingMonitoringFreeAccountCta,
 } from './PingMonitoringBottomSections';
-import StatusPagesSection from '../FeatureLanding/KeywordMonitoring/KeywordMonitotoringStatusPageSection';
-import TeamMembersSection from '../FeatureLanding/KeywordMonitoring/TeamMembersSection';
+import PingMonitoringHero from './PingMonitoringHero';
+import {
+  PingMonitoringAdvancedFeatures,
+  PingMonitoringInsightCards,
+  PingMonitoringTypeCards,
+} from './PingMonitoringSections';
+import PingMonitoringSetupShowcase from './PingMonitoringSetupShowcase';
 import PingReliabilitySection from './PingReliabilitySection';
 
 const PingMonitoringpge = () => {
   return (
     <div>
       <PingMonitoringHero />
+      <LogoMarquee />
       <PingMonitoringSetupShowcase />
       <PingMonitoringAdvancedFeatures />
       <PingMonitoringInsightCards />

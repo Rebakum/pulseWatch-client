@@ -57,9 +57,7 @@ function KeywordSetupMock() {
               <span
                 key={label}
                 className={`flex items-center gap-2 rounded-md px-2 py-1.5 text-[11px] ${
-                  active
-                    ? 'bg-brand-blue/10 font-semibold text-brand-blue'
-                    : 'text-[var(--muted)]'
+                  active ? 'bg-brand-blue/10 font-semibold text-brand-blue' : 'text-[var(--muted)]'
                 }`}
               >
                 <Icon className="h-3.5 w-3.5 shrink-0" />
@@ -160,11 +158,7 @@ function KeywordSetupMock() {
               <div className={`${FIELD} mt-1.5`}>Username</div>
             </div>
           </div>
-
-          <button
-            type="button"
-            className="mt-6 rounded-md bg-brand-blue px-4 py-2 text-[11px] font-semibold text-white"
-          >
+          <button className="mt-3 rounded-md bg-[image:var(--background-image-brand-gradient)] p-1.5 text-center font-semibold text-white text-[12px]">
             Create monitor
           </button>
         </div>

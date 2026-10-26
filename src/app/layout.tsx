@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@/components/common/ThemeProvider/ThemeProvider';
+import ScrollToTopOnNavigate from '@/components/common/ScrollToTopOnNavigate';
 import { env } from '@/config/env';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 import './globals.css';
 
 const inter = Inter({
@@ -29,7 +30,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Suspense fallback={null}>
+            <ScrollToTopOnNavigate />
+          </Suspense>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

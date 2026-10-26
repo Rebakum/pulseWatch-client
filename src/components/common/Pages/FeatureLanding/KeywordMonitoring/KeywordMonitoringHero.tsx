@@ -149,9 +149,9 @@ export default function KeywordMonitoringHero() {
                 </b>
                 Moo team
               </span>
-              <div className="mt-3 rounded-md bg-[image:var(--background-image-brand-gradient)] p-1.5 text-center font-semibold text-white">
+              <button className="mt-3 rounded-md bg-[image:var(--background-image-brand-gradient)] p-1.5 text-center font-semibold text-white">
                 Upgrade now
-              </div>
+              </button>
             </div>
           </div>
 
