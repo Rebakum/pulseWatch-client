@@ -1,7 +1,7 @@
 import type { AdvancedFeaturesSectionData, IconCardsSectionData } from '@/types/landing';
 
-import AdvancedFeatures from '../FeatureLanding/WebsiteMonitoring/sections/AdvancedFeatures';
-import IconCards from '../FeatureLanding/WebsiteMonitoring/sections/IconCards';
+import AdvancedFeatures from '../WebsiteMonitoring/sections/AdvancedFeatures';
+import IconCards from '../WebsiteMonitoring/sections/IconCards';
 
 const ADVANCED_FEATURES: AdvancedFeaturesSectionData = {
   title: [{ text: 'Advanced features for advanced users' }, { text: '.', tone: 'brand' }],
@@ -13,7 +13,8 @@ const ADVANCED_FEATURES: AdvancedFeaturesSectionData = {
     },
     {
       title: 'Maintenance windows',
-      description: 'Pause ping alerts during planned maintenance and avoid unnecessary notifications.',
+      description:
+        'Pause ping alerts during planned maintenance and avoid unnecessary notifications.',
     },
     {
       title: 'Multi-location checks',

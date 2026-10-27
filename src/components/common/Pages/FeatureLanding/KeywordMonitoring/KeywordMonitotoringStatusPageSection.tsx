@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import Container from '@/components/common/Container';
 import ShaderButton from '@/components/shader-button/ShaderButton';
 
 /* Colors: only globals.css tokens
@@ -32,9 +33,13 @@ const statusRows = [
 
 function StatusPageMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-[640px] pb-10 [perspective:1400px]">
+    <div className="relative isolate mx-auto w-full max-w-[640px] pb-10 [perspective:1400px]">
       <div
-        className="relative origin-center [transform-style:preserve-3d]"
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-[42%] z-0 aspect-square w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-blue/10 dark:bg-brand-blue/20"
+      />
+      <div
+        className="relative z-10 origin-center [transform-style:preserve-3d]"
         style={{ transform: 'rotateX(52deg) rotateZ(-18deg) skewX(6deg) scale(0.86)' }}
       >
         {/* back panel */}
@@ -124,7 +129,7 @@ function StatusPageMockup() {
 export default function StatusPagesSection() {
   return (
     <section className="overflow-hidden bg-[var(--background)] py-10 text-[var(--foreground)]">
-      <div className="mx-auto grid max-w-[1366px] items-center gap-12 px-6 md:px-10 lg:grid-cols-2">
+      <Container className="grid items-center gap-12 lg:grid-cols-2">
         {/* left copy */}
         <div>
           <h2 className="text-4xl font-semibold leading-[1.15] tracking-tight text-[var(--foreground)] md:text-5xl">
@@ -152,7 +157,7 @@ export default function StatusPagesSection() {
 
         {/* right mockup */}
         <StatusPageMockup />
-      </div>
+      </Container>
     </section>
   );
 }

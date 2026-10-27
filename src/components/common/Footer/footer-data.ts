@@ -16,9 +16,9 @@ export const sections: FooterSection[] = [
   {
     title: 'Product',
     links: [
-      { label: 'Integrations', href: '/integrations' },
-      { label: 'API', href: '/api' },
-      { label: 'CLI', href: '/cli' },
+      { label: 'Integrations', href: '/solutions/integrations' },
+      { label: 'API', href: '/solutions/api' },
+      { label: 'CLI', href: '/solutions/cli' },
       { label: 'MCP', href: '/mcp' },
       { label: 'Roadmap', href: '/roadmap' },
       { label: 'Status', href: '/status' },

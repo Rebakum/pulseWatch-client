@@ -26,13 +26,14 @@ const RESERVED_ROOT_SLUGS = new Set([
 const DEDICATED_ROOT_PATHS = new Set(['/', '/enterprise', '/pricing']);
 
 const TOOLS_PREFIX = '/tools/';
+const SOLUTIONS_PREFIX = '/solutions/';
 
-const buildRootPageRegistry = (): Record<string, FeatureLandingPage> => {
-  const registry: Record<string, FeatureLandingPage> = {};
+const assertUniquePageSlugs = () => {
+  const slugs = new Set<string>();
 
   for (const source of [FEATURE_PAGES, SOLUTION_PAGES, RESOURCE_PAGES]) {
-    for (const [slug, page] of Object.entries(source)) {
-      if (slug in registry) {
+    for (const slug of Object.keys(source)) {
+      if (slugs.has(slug)) {
         throw new Error(`Duplicate landing page slug "${slug}" across registries.`);
       }
       if (RESERVED_ROOT_SLUGS.has(slug)) {
@@ -40,6 +41,18 @@ const buildRootPageRegistry = (): Record<string, FeatureLandingPage> => {
           `Landing page slug "${slug}" collides with a static route. Rename it or remove the route.`,
         );
       }
+      slugs.add(slug);
+    }
+  }
+};
+
+assertUniquePageSlugs();
+
+const buildRootPageRegistry = (): Record<string, FeatureLandingPage> => {
+  const registry: Record<string, FeatureLandingPage> = {};
+
+  for (const source of [FEATURE_PAGES, RESOURCE_PAGES]) {
+    for (const [slug, page] of Object.entries(source)) {
       registry[slug] = page;
     }
   }
@@ -47,14 +60,21 @@ const buildRootPageRegistry = (): Record<string, FeatureLandingPage> => {
   return registry;
 };
 
-/** All flat root pages (features + solutions + resources), keyed by slug. */
+/** Flat feature and resource pages, keyed by slug. */
 export const ROOT_PAGES: Record<string, FeatureLandingPage> = buildRootPageRegistry();
 
 /** Slug list for `(public)/[feature]` generateStaticParams. */
 export const ROOT_PAGE_SLUGS: string[] = Object.keys(ROOT_PAGES);
 
+/** Solution pages served beneath `/solutions/[solution]`. */
+export const SOLUTION_SLUGS: string[] = Object.keys(SOLUTION_PAGES);
+
 export function findRootPage(slug: string): FeatureLandingPage | undefined {
   return ROOT_PAGES[slug];
+}
+
+export function findSolutionPage(slug: string): FeatureLandingPage | undefined {
+  return SOLUTION_PAGES[slug];
 }
 
 export function findToolPage(slug: string): FeatureLandingPage | undefined {
@@ -81,6 +101,11 @@ const findBrokenNavLinks = (links: NavLink[]): string[] =>
     if (href.startsWith(TOOLS_PREFIX)) {
       const slug = href.slice(TOOLS_PREFIX.length);
       return TOOL_PAGES[slug] ? [] : [`${link.label} → ${href} (missing TOOL_PAGES entry)`];
+    }
+
+    if (href.startsWith(SOLUTIONS_PREFIX)) {
+      const slug = href.slice(SOLUTIONS_PREFIX.length);
+      return SOLUTION_PAGES[slug] ? [] : [`${link.label} → ${href} (missing SOLUTION_PAGES entry)`];
     }
 
     const slug = href.slice(1);

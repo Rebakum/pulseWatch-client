@@ -1,5 +1,5 @@
 import { env } from '@/config/env';
-import { ROOT_PAGE_SLUGS } from '@/constants/page-registry';
+import { ROOT_PAGE_SLUGS, SOLUTION_SLUGS } from '@/constants/page-registry';
 import { TOOL_SLUGS } from '@/constants/feature-pages';
 import type { MetadataRoute } from 'next';
 
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: path === '/' ? base : `${base}${path}`,
     })),
     ...ROOT_PAGE_SLUGS.map((slug) => ({ url: `${base}/${slug}` })),
+    ...SOLUTION_SLUGS.map((slug) => ({ url: `${base}/solutions/${slug}` })),
     ...TOOL_SLUGS.map((slug) => ({ url: `${base}/tools/${slug}` })),
   ];
 }

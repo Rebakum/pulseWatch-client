@@ -1,5 +1,6 @@
 import { UserPlus, X } from 'lucide-react';
 import Link from 'next/link';
+import Container from '@/components/common/Container';
 
 /* Colors: only globals.css tokens
    --background / --surface / --border / --foreground / --muted
@@ -16,11 +17,15 @@ const monitorRows = [
 
 function InviteMockup() {
   return (
-    <div className="relative h-[300px] w-full md:h-[420px]">
+    <div className="relative isolate h-[300px] w-full md:h-[420px]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[42%] top-1/2 z-0 aspect-square w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-blue/10 dark:bg-brand-blue/20"
+      />
       {/* brand glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[38%] top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2"
+        className="pointer-events-none absolute left-[38%] top-1/2 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2"
         style={{
           background:
             'radial-gradient(circle at center, color-mix(in srgb, var(--color-brand-blue) 38%, transparent) 0%, color-mix(in srgb, var(--color-brand-purple) 16%, transparent) 38%, transparent 68%)',
@@ -30,7 +35,7 @@ function InviteMockup() {
       {/* dimmed dashboard behind */}
       <div
         aria-hidden="true"
-        className="absolute bottom-10 left-6 top-[88px] w-[420px] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] opacity-60 blur-[0.6px]"
+        className="absolute bottom-10 left-6 top-[88px] z-10 w-[420px] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] opacity-60 blur-[0.6px]"
       >
         <div className="flex h-full">
           <div className="w-14 space-y-3 border-r border-[var(--border)] p-3">
@@ -61,7 +66,7 @@ function InviteMockup() {
       </div>
 
       {/* invite modal */}
-      <div className="absolute left-[36%] top-[22%] w-[250px] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl shadow-black/30 dark:shadow-black/60 md:w-[260px]">
+      <div className="absolute left-[36%] top-[22%] z-20 w-[250px] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl shadow-black/30 dark:shadow-black/60 md:w-[260px]">
         <div className="relative px-4 pb-3 pt-4 text-center">
           <UserPlus className="mx-auto h-5 w-5 text-brand-blue" aria-hidden="true" />
           <p className="mt-1.5 text-[10px] font-bold text-[var(--foreground)]">
@@ -113,30 +118,32 @@ function InviteMockup() {
 
 export default function TeamMembersSection() {
   return (
-    <section className="bg-[var(--background)] px-4 py-10 text-[var(--foreground)] md:px-6">
-      <div className="mx-auto grid max-w-[1340px] items-center overflow-hidden rounded-[40px] border border-[var(--border)] md:rounded-[48px] lg:grid-cols-2">
-        {/* left: mockup */}
-        <InviteMockup />
+    <section className="bg-[var(--background)] py-10 text-[var(--foreground)]">
+      <Container>
+        <div className="grid items-center overflow-hidden rounded-[40px] border border-[var(--border)] md:rounded-[48px] lg:grid-cols-2">
+          {/* left: mockup */}
+          <InviteMockup />
 
-        {/* right: copy */}
-        <div className="px-8 pb-12 pt-4 md:px-12 lg:py-16 lg:pl-0">
-          <h3 className="text-3xl font-semibold leading-[1.3] tracking-tight text-[var(--foreground)] md:text-[34px]">
-            Add your team members
-            <br />
-            to keep them notified
-            <span className="text-brand-blue">.</span>
-          </h3>
+          {/* right: copy */}
+          <div className="px-8 pb-12 pt-4 md:px-12 lg:py-16 lg:pl-0">
+            <h3 className="text-3xl font-semibold leading-[1.3] tracking-tight text-[var(--foreground)] md:text-[34px]">
+              Add your team members
+              <br />
+              to keep them notified
+              <span className="text-brand-blue">.</span>
+            </h3>
 
-          <p className="mt-6 max-w-[620px] text-lg leading-relaxed text-[var(--muted)]">
-            You can invite all your team members to access your monitors, keep them notified and
-            manage incidents. Choose from three levels of user access: read, write and notify-only.
-          </p>
+            <p className="mt-6 max-w-[620px] text-lg leading-relaxed text-[var(--muted)]">
+              You can invite all your team members to access your monitors, keep them notified and
+              manage incidents. Choose from three levels of user access: read, write and notify-only.
+            </p>
 
-          <Link href="/incident-management" className="outline-btn mt-8">
-            Explore incident management
-          </Link>
+            <Link href="/incident-management" className="outline-btn mt-8">
+              Explore incident management
+            </Link>
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

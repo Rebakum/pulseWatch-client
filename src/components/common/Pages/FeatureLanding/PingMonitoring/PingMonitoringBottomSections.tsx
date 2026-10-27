@@ -4,16 +4,13 @@ import type {
   TestimonialsSectionData,
 } from '@/types/landing';
 
-import ArticleCards from '../FeatureLanding/WebsiteMonitoring/sections/ArticleCards';
-import FaqSection from '../FeatureLanding/WebsiteMonitoring/sections/FaqSection';
-import Testimonials from '../FeatureLanding/WebsiteMonitoring/sections/Testimonials';
-import KeywordFreeAccountCta from '../FeatureLanding/KeywordMonitoring/KeywordFreeAccountCta';
+import KeywordFreeAccountCta from '../KeywordMonitoring/KeywordFreeAccountCta';
+import ArticleCards from '../WebsiteMonitoring/sections/ArticleCards';
+import FaqSection from '../WebsiteMonitoring/sections/FaqSection';
+import Testimonials from '../WebsiteMonitoring/sections/Testimonials';
 
 const TESTIMONIALS: TestimonialsSectionData = {
-  title: [
-    { text: 'What users love about our ping monitoring' },
-    { text: '.', tone: 'brand' },
-  ],
+  title: [{ text: 'What users love about our ping monitoring' }, { text: '.', tone: 'brand' }],
   items: [
     {
       name: 'PulseWatch user',

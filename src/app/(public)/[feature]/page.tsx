@@ -1,11 +1,13 @@
 import FeatureLanding from '@/components/common/Pages/FeatureLanding/FeatureLanding';
 import KeywordMonitoringPage from '@/components/common/Pages/FeatureLanding/KeywordMonitoring/KeywordMonitoringPage';
+import PingMonitoringpge from '@/components/common/Pages/FeatureLanding/PingMonitoring/PingMonitoringpge';
 import ThirdPartyMonitoringPage from '@/components/common/Pages/FeatureLanding/ThirdPartyMonitoring/ThirdPartyMonitoringPage';
 import LandingPage from '@/components/common/Pages/FeatureLanding/WebsiteMonitoring/WebsiteMonitoring';
-import PingMonitoringpge from '@/components/common/Pages/PingMonitoring/PingMonitoringpge';
-import { ROOT_PAGE_SLUGS, findRootPage } from '@/constants/page-registry';
+import ApiPage from '@/components/common/Pages/Solution/Api/ApiPage';
+import IntegrationsPage from '@/components/common/Pages/Solution/Integrations/IntegrationsPage';
+import { ROOT_PAGE_SLUGS, findRootPage, findSolutionPage } from '@/constants/page-registry';
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { Suspense, use } from 'react';
 
 interface FeaturePageProps {
@@ -18,7 +20,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: FeaturePageProps): Promise<Metadata> {
   const { feature } = await params;
-  const page = findRootPage(feature);
+  const page = findRootPage(feature) ?? findSolutionPage(feature);
 
   if (!page) {
     return {};
@@ -28,7 +30,12 @@ export async function generateMetadata({ params }: FeaturePageProps): Promise<Me
     title: page.seo?.title ?? `${page.title} ${page.highlight}`,
     description: page.seo?.description ?? page.description,
     alternates: {
-      canonical: `/${feature}`,
+      canonical:
+        feature === 'integrations'
+          ? '/integrations'
+          : findRootPage(feature)
+            ? `/${feature}`
+            : `/solutions/${feature}`,
     },
   };
 }
@@ -37,7 +44,14 @@ function FeaturePageContent({ params }: FeaturePageProps) {
   const { feature } = use(params);
   const page = findRootPage(feature);
 
+  if (feature === 'integrations') {
+    return <IntegrationsPage />;
+  }
+
   if (!page) {
+    if (findSolutionPage(feature)) {
+      redirect(`/solutions/${feature}`);
+    }
     notFound();
   }
 
@@ -51,6 +65,10 @@ function FeaturePageContent({ params }: FeaturePageProps) {
 
   if (feature === 'ping-monitoring') {
     return <PingMonitoringpge />;
+  }
+
+  if (feature === 'api') {
+    return <ApiPage />;
   }
 
   if (page.sections && page.sections.length > 0) {
