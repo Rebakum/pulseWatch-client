@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export function ArrowButton({ href = '#', label }: { href?: string; label: string }) {
   return (
-    <a
+    <Link
       href={href}
       aria-label={label}
       className="grid size-9 shrink-0 place-items-center rounded-full border border-brand-blue/40 bg-brand-blue/5 text-brand-blue transition hover:bg-brand-blue/15"
@@ -14,6 +16,6 @@ export function ArrowButton({ href = '#', label }: { href?: string; label: strin
       >
         <path d="M8 5l5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-    </a>
+    </Link>
   );
 }

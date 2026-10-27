@@ -15,15 +15,28 @@ export default function SocialLinks() {
     <ul className="mt-4 flex gap-2.5">
       {socials.map(({ name, href }) => (
         <li key={name}>
-          <a
-            href={href}
-            aria-label={name}
-            className="grid size-7 place-items-center rounded-full bg-slate-600/40 text-slate-400 transition hover:bg-slate-500/50 hover:text-white"
-          >
-            <svg viewBox="0 0 24 24" className="size-3.5" fill="currentColor" aria-hidden>
-              <path d={icons[name]} />
-            </svg>
-          </a>
+          {href === '#' ? (
+            <span
+              aria-label={name}
+              className="grid size-7 place-items-center rounded-full bg-slate-600/40 text-slate-400"
+            >
+              <svg viewBox="0 0 24 24" className="size-3.5" fill="currentColor" aria-hidden>
+                <path d={icons[name]} />
+              </svg>
+            </span>
+          ) : (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={name}
+              className="grid size-7 place-items-center rounded-full bg-slate-600/40 text-slate-400 transition hover:bg-slate-500/50 hover:text-white"
+            >
+              <svg viewBox="0 0 24 24" className="size-3.5" fill="currentColor" aria-hidden>
+                <path d={icons[name]} />
+              </svg>
+            </a>
+          )}
         </li>
       ))}
     </ul>

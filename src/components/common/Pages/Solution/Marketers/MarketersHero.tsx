@@ -27,7 +27,7 @@ export default function MarketersHero() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
               <ShaderButton href="/register">Start monitoring for free</ShaderButton>
-              <span className="text-xs text-slate-400">No credit card required</span>
+              <span className="text-xs text-slate-300">No credit card required</span>
             </div>
           </div>
 

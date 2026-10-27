@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Container from '@/components/common/Container';
 
 import { content } from './Content';
@@ -24,12 +26,12 @@ export default function IntegrationsSection() {
             {content.description}
           </p>
 
-          <a
+          <Link
             href={content.link.href}
             className="font-bold text-[var(--color-brand-blue)] underline underline-offset-4 transition-colors hover:text-[var(--color-brand-magenta)]"
           >
             {content.link.label}
-          </a>
+          </Link>
         </div>
 
         {/* Illustration */}

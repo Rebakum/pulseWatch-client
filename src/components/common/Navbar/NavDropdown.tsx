@@ -48,7 +48,7 @@ const NavDropdownLink = ({ link, onClose }: NavDropdownLinkProps) => {
     'flex w-full items-center justify-between gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-[15px] font-medium transition-colors',
     link.isComingSoon
       ? 'pointer-events-none cursor-not-allowed text-[var(--muted)] opacity-60'
-      : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue dark:hover:text-[color:color-mix(in_oklab,var(--color-brand-blue)_75%,white)]',
+      : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue dark:hover:text-brand-blue-light',
   ].join(' ');
 
   const labelContent = (
@@ -255,7 +255,7 @@ export const NavDropdown = ({ item, isOpen, onOpenStateChange }: NavDropdownProp
     'inline-flex h-10 items-center gap-1 rounded-xl px-3 text-sm font-medium transition-colors',
     isOpen
       ? 'bg-brand-blue/10 text-brand-blue dark:text-[color:color-mix(in_oklab,var(--color-brand-blue)_75%,white)]'
-      : 'text-[var(--muted)] hover:bg-brand-blue/10 hover:text-brand-blue',
+      : 'text-[var(--foreground)] hover:bg-brand-blue/10 hover:text-brand-blue dark:hover:text-brand-blue-light',
   ].join(' ');
 
   const panelClasses = [

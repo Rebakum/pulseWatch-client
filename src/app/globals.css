@@ -40,6 +40,7 @@
 
 /* ---------- Theme variables (light / dark) ---------- */
 :root {
+  color-scheme: light;
   --background: #ffffff;
   --surface: #f8fafc;
   --foreground: #0f172a;
@@ -48,6 +49,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --background: #0b1020;
   --surface: #121a30;
   --foreground: #e5e7eb;

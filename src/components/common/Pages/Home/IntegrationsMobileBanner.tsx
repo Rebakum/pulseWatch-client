@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Link from 'next/link';
 
 /**
  * FeatureCards — "Integrations" + "Monitor on the go" section
@@ -14,7 +15,7 @@ const BRAND = 'CodesRaft'; // change to your product name
 
 function ArrowButton({ href = '#', label }: { href?: string; label: string }) {
   return (
-    <a
+    <Link
       href={href}
       aria-label={label}
       className="grid size-9 shrink-0 place-items-center rounded-full border border-brand-blue/40 bg-brand-blue/5 text-brand-blue transition hover:bg-brand-blue/15"
@@ -28,7 +29,7 @@ function ArrowButton({ href = '#', label }: { href?: string; label: string }) {
       >
         <path d="M8 5l5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-    </a>
+    </Link>
   );
 }
 

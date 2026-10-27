@@ -1,9 +1,10 @@
 import type { ComponentProps, ReactNode } from 'react';
+import Link from 'next/link';
 
 type ShaderButtonProps = {
   children: ReactNode;
   icon?: ReactNode;
-  href?: string; // href dile <a>, na dile <button>
+  href?: string;
   className?: string;
 } & Omit<ComponentProps<'button'>, 'children' | 'className'>;
 
@@ -23,8 +24,16 @@ export default function ShaderButton({
   );
 
   if (href) {
+    if (href.startsWith('/') || href.startsWith('#')) {
+      return (
+        <Link href={href} className={cls}>
+          {inner}
+        </Link>
+      );
+    }
+
     return (
-      <a href={href} className={cls}>
+      <a href={href} className={cls} target="_blank" rel="noopener noreferrer">
         {inner}
       </a>
     );

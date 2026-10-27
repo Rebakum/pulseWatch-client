@@ -94,13 +94,13 @@ export default function RegisterPage() {
         </p>
         <p className="text-xs text-[var(--muted)] max-w-xs mx-auto">
           By creating account you agree to our{' '}
-          <a href="#" className="underline hover:text-[var(--foreground)]">
+          <span className="underline">
             Terms &amp; Conditions
-          </a>{' '}
+          </span>{' '}
           and{' '}
-          <a href="#" className="underline hover:text-[var(--foreground)]">
+          <span className="underline">
             Privacy Policy
-          </a>
+          </span>
         </p>
       </div>
     </div>

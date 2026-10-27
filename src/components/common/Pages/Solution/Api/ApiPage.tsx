@@ -18,6 +18,7 @@ import Container from '@/components/common/Container';
 import ShaderButton from '@/components/shader-button/ShaderButton';
 
 import DeveloperGradientText from '../ForDevelopers/DeveloperGradientText';
+import LogoMarquee from '../../Home/LogoMarquee';
 
 const API_FEATURES = [
   {
@@ -243,6 +244,7 @@ export default function ApiPage() {
           <ApiPreview />
         </Container>
       </section>
+      <LogoMarquee />
 
       <section className="bg-[var(--background)] py-12 text-[var(--foreground)] sm:py-16">
         <Container>

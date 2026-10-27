@@ -29,12 +29,9 @@ export default function CellValue({ value }: { value: Cell }) {
   return (
     <span>
       {value.before}
-      <a
-        href="#"
-        className="text-[var(--foreground)] underline underline-offset-2 hover:text-[var(--color-brand-blue)]"
-      >
+      <span className="text-[var(--foreground)] underline underline-offset-2">
         {value.link}
-      </a>
+      </span>
       {value.after}
     </span>
   );

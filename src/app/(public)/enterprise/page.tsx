@@ -11,11 +11,13 @@ import FeaturesGrid from '@/components/common/Pages/Enterprizes/Features-grid/Fe
 import IntegrationsSection from '@/components/common/Pages/Enterprizes/Integrations-section/IntegrationsSection';
 import StatusPages from '@/components/common/Pages/Enterprizes/Status-pages/StatusPages';
 import TrustedBy from '@/components/common/Pages/Enterprizes/TrustedBy/Trustedby ';
+import LogoMarquee from '@/components/common/Pages/Home/LogoMarquee';
 
 export default function EnterprisePage() {
   return (
     <>
       <EnterpriseHero />
+      <LogoMarquee />
       <TrustedBy />
       <CostComparison />
       <EnterpriseReady />

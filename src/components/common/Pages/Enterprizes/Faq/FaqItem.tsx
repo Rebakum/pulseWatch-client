@@ -1,4 +1,5 @@
 import { Minus, Plus } from 'lucide-react';
+import Link from 'next/link';
 
 type FaqItemProps = {
   id: string;
@@ -50,12 +51,9 @@ export default function FaqItem({ id, question, answer, link, open, onToggle }: 
           <p className="pb-5 text-sm leading-relaxed text-[var(--muted)]">
             {answer}{' '}
             {link && (
-              <a
-                href={link.href}
-                className="font-medium text-blue-600 underline underline-offset-4"
-              >
+              <Link href={link.href} className="font-medium text-blue-600 underline underline-offset-4">
                 {link.label}
-              </a>
+              </Link>
             )}
           </p>
         </div>

@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/components/common/ThemeProvider/ThemeProvider';
+import { ThemeProvider } from '@wrksz/themes/next';
 import ScrollToTopOnNavigate from '@/components/common/ScrollToTopOnNavigate';
 import { env } from '@/config/env';
 import type { Metadata } from 'next';
@@ -30,7 +30,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          enableColorScheme
+        >
           <Suspense fallback={null}>
             <ScrollToTopOnNavigate />
           </Suspense>

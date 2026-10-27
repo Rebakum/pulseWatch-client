@@ -27,7 +27,7 @@ const getScrollSnapshot = () => window.scrollY > SCROLL_THRESHOLD_PX;
 const getScrollServerSnapshot = () => false;
 
 const PLAIN_TRIGGER_CLASSES =
-  'inline-flex h-10 items-center rounded-xl px-3 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-brand-blue/10 hover:text-brand-blue';
+  'inline-flex h-10 items-center rounded-xl px-3 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-brand-blue/10 hover:text-brand-blue dark:hover:text-brand-blue-light';
 
 export const Navbar = () => {
   const [openDropdownLabel, setOpenDropdownLabel] = useState<string | null>(null);
@@ -96,8 +96,8 @@ export const Navbar = () => {
   };
 
   const barClasses = [
-    'relative rounded-2xl border border-[var(--border)] shadow-md backdrop-blur-md transition-colors',
-    isScrolled ? 'bg-[color:var(--surface)]/95' : 'bg-[color:var(--surface)]/70',
+    'relative rounded-2xl border border-[var(--border)] text-[var(--foreground)] shadow-md backdrop-blur-md transition-colors',
+    isScrolled ? 'bg-[color:var(--surface)]/95' : 'bg-[color:var(--surface)]/85',
   ].join(' ');
 
   return (
@@ -137,7 +137,7 @@ export const Navbar = () => {
               {/* Desktop Login Link - 100% Fully Rounded */}
               <Link
                 href={LOGIN_LINK.href}
-                className="inline-flex h-9 items-center justify-center rounded-full border border-[var(--border)] px-4 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue max-lg:hidden"
+                className="inline-flex h-9 items-center justify-center rounded-full border border-[var(--border)] px-4 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-blue-light max-lg:hidden"
               >
                 {LOGIN_LINK.label}
               </Link>
@@ -291,7 +291,7 @@ export const Navbar = () => {
               <Link
                 href={LOGIN_LINK.href}
                 onClick={closeMobileMenu}
-                className="flex w-full items-center justify-center rounded-full border border-[var(--border)] px-4 py-2.5 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue"
+                className="flex w-full items-center justify-center rounded-full border border-[var(--border)] px-4 py-2.5 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-brand-blue hover:text-brand-blue dark:hover:text-brand-blue-light"
               >
                 {LOGIN_LINK.label}
               </Link>

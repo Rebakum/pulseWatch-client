@@ -14,11 +14,13 @@ import WebhookRetries from './sections/WebhookRetries';
 import WebhookScale from './sections/WebhookScale';
 import WebhookSecurity from './sections/WebhookSecurity';
 import WebhookUseCases from './sections/WebhookUseCases';
+import LogoMarquee from '../../Home/LogoMarquee';
 
 export default function WebhooksPage() {
   return (
     <main aria-label="Webhooks">
       <WebhookHero />
+      <LogoMarquee />
       <WebhookOverview />
       <WebhookEventTypes />
       <WebhookPayload />

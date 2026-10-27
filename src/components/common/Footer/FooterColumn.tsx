@@ -1,6 +1,9 @@
+import Link from 'next/link';
+
 import type { FooterSection } from './footer-data';
 
-const linkClass = 'text-xs text-slate-300 transition hover:text-white';
+const linkClass =
+  'inline-flex cursor-pointer text-xs text-slate-300 transition-all duration-200 hover:translate-x-1 hover:text-white';
 
 export default function FooterColumn({ title, links }: FooterSection) {
   return (
@@ -17,17 +20,17 @@ export default function FooterColumn({ title, links }: FooterSection) {
               {item.group.map((l, i) => (
                 <span key={l.label}>
                   {i > 0 && <span className="mx-1">/</span>}
-                  <a href={l.href} className={linkClass}>
+                  <Link href={l.href} className={linkClass}>
                     {l.label}
-                  </a>
+                  </Link>
                 </span>
               ))}
             </li>
           ) : (
             <li key={item.label}>
-              <a href={item.href} className={linkClass}>
+              <Link href={item.href} className={linkClass}>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ),
         )}

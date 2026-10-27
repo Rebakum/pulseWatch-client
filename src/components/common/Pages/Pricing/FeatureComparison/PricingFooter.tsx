@@ -18,12 +18,9 @@ export default function PricingFooter() {
         ))}
       </div>
 
-      <a
-        href="#"
-        className="text-xs text-[var(--muted)] underline underline-offset-2 hover:text-[var(--foreground)]"
-      >
+      <span className="text-xs text-[var(--muted)] underline underline-offset-2">
         See machine-readable pricing (for AI agents)
-      </a>
+      </span>
     </div>
   );
 }

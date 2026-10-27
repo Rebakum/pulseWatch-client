@@ -13,7 +13,7 @@ export const faqList: FaqEntry[] = [
       <>
         <p>
           {BRAND} is an uptime monitoring service that continuously checks{' '}
-          <Link href="#" className={linkClass}>
+          <Link href="/website-monitoring" className={linkClass}>
             websites, APIs, and other endpoints
           </Link>
           . It alerts you when anything goes down, degrades, or changes. So you can stay on top of
@@ -21,11 +21,11 @@ export const faqList: FaqEntry[] = [
         </p>
         <p>
           {BRAND} also provides tools to transparently communicate the{' '}
-          <Link href="#" className={linkClass}>
+          <Link href="/status-pages" className={linkClass}>
             real-time status
           </Link>{' '}
           and reliability of your systems, and proactively{' '}
-          <Link href="#" className={linkClass}>
+          <Link href="/incident-management" className={linkClass}>
             manage incidents
           </Link>{' '}
           when they happen.

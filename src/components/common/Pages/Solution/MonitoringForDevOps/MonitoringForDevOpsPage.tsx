@@ -17,11 +17,13 @@ import {
   DevOpsTestimonials,
   DevOpsTrustSections,
 } from './DevOpsMoreSections';
+import LogoMarquee from '../../Home/LogoMarquee';
 
 export default function MonitoringForDevOpsPage() {
   return (
     <main aria-label="Monitoring for DevOps solution">
       <DevOpsHero />
+      <LogoMarquee />
       <DevOpsIntegrations />
       <DevOpsMustHaveFeatures />
       <DevOpsMonitorTypes />
