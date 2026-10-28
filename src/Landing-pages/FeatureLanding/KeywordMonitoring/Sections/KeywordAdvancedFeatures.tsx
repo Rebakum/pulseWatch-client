@@ -1,5 +1,5 @@
 import type { AdvancedFeaturesSectionData } from '@/types/landing';
-import AdvancedFeatures from '../../WebsiteMonitoring/sections/AdvancedFeatures';
+import AdvancedFeatures from './AdvancedFeatures';
 
 const DATA: AdvancedFeaturesSectionData = {
   title: [{ text: 'Advanced features for advanced users' }, { text: '.', tone: 'brand' }],

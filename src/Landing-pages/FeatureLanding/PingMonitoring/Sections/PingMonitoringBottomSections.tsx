@@ -4,10 +4,10 @@ import type {
   TestimonialsSectionData,
 } from '@/types/landing';
 
-import KeywordFreeAccountCta from '../../KeywordMonitoring/Sections/KeywordFreeAccountCta';
-import ArticleCards from '../../WebsiteMonitoring/sections/ArticleCards';
-import FaqSection from '../../WebsiteMonitoring/sections/FaqSection';
-import Testimonials from '../../WebsiteMonitoring/sections/Testimonials';
+import KeywordFreeAccountCta from './PingFreeAccountCta';
+import ArticleCards from './ArticleCards';
+import FaqSection from './FaqSection';
+import Testimonials from './Testimonials';
 
 const TESTIMONIALS: TestimonialsSectionData = {
   title: [{ text: 'What users love about our ping monitoring' }, { text: '.', tone: 'brand' }],

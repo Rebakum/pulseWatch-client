@@ -1,5 +1,7 @@
 import type { FeatureLandingPage } from '@/constants/feature-pages';
 import { ROOT_PAGE_SLUGS, findRootPage } from '@/constants/page-registry';
+import ApiMonitoringPage from '@/Landing-pages/FeatureLanding/ApiMonitoring/ApiMonitoringPage';
+import CronJobMonitoringPage from '@/Landing-pages/FeatureLanding/CronJobMonitoring/CronJobMonitoringPage';
 import KeywordMonitoringPage from '@/Landing-pages/FeatureLanding/KeywordMonitoring/KeywordMonitoringPage';
 import PingMonitoringpge from '@/Landing-pages/FeatureLanding/PingMonitoring/PingMonitoringpge';
 import ThirdPartyMonitoringPage from '@/Landing-pages/FeatureLanding/ThirdPartyMonitoring/ThirdPartyMonitoringPage';
@@ -10,6 +12,7 @@ import { notFound } from 'next/navigation';
 import { Suspense, use, type ComponentType } from 'react';
 import LogoMarquee from '../HomePage/LogoMarquee/LogoMarquee';
 import PortMonitoringPage from './PortMonitoring/PortMonitoringPage';
+import UdpMonitoringPage from './UdpMonitoring/UdpMonitoring';
 
 interface FeatureLandingProps {
   page: FeatureLandingPage;
@@ -26,6 +29,9 @@ const FEATURE_PAGES: Record<string, ComponentType> = {
   'third-party-monitoring': ThirdPartyMonitoringPage,
   'ping-monitoring': PingMonitoringpge,
   'port-monitoring': PortMonitoringPage,
+  'cron-job-monitoring': CronJobMonitoringPage,
+  'api-monitoring': ApiMonitoringPage,
+  'udp-monitoring': UdpMonitoringPage,
 };
 
 export function generateFeatureLandingStaticParams() {

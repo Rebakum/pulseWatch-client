@@ -5,7 +5,7 @@ import KeywordFreeAccountCta from '@/Landing-pages/FeatureLanding/KeywordMonitor
 import StatusPagesSection from '@/Landing-pages/FeatureLanding/KeywordMonitoring/Sections/KeywordMonitotoringStatusPageSection';
 import ArticleCards from '@/Landing-pages/FeatureLanding/WebsiteMonitoring/sections/ArticleCards';
 import FaqSection from '@/Landing-pages/FeatureLanding/WebsiteMonitoring/sections/FaqSection';
-import TeamMembersSection from '@/Pages/FeatureLanding/PortMonitoring/TeamMembersSection';
+import TeamMembersSection from '@/Landing-pages/FeatureLanding/PortMonitoring/Sections/PortTeamMembersSection';
 import type { ArticleCardsSectionData, FaqSectionData } from '@/types/landing';
 
 const ARTICLES: ArticleCardsSectionData = {

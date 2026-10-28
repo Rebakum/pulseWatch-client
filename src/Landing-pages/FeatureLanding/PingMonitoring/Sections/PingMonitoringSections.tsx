@@ -1,7 +1,7 @@
 import type { AdvancedFeaturesSectionData, IconCardsSectionData } from '@/types/landing';
 
-import AdvancedFeatures from '../../WebsiteMonitoring/sections/AdvancedFeatures';
-import IconCards from '../../WebsiteMonitoring/sections/IconCards';
+import AdvancedFeatures from './AdvancedFeatures';
+import IconCards from './IconCards';
 
 const ADVANCED_FEATURES: AdvancedFeaturesSectionData = {
   title: [{ text: 'Advanced features for advanced users' }, { text: '.', tone: 'brand' }],

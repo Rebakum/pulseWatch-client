@@ -12,7 +12,7 @@ import {
 import Link from 'next/link';
 
 import Container from '@/components/common/Container';
-import SplitHeader from '../../WebsiteMonitoring/sections/SplitHeader';
+import SplitHeader from './SplitHeader';
 
 const NAV_ITEMS = [
   { label: 'Monitoring', Icon: Activity, active: true },

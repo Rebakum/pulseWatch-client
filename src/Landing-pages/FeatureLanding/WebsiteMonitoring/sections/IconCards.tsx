@@ -29,6 +29,8 @@ const ICONS: Record<IconCardIcon, LucideIcon> = {
   api: Code,
   udp: Radio,
   tcp: Activity,
+  clock: Clock,
+  network: Network,
   thirdParty: Puzzle,
   responseTime: TrendingUp,
   sslExpiry: ShieldCheck,

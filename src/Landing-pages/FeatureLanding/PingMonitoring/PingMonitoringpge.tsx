@@ -1,6 +1,6 @@
 import LogoMarquee from '../../HomePage/LogoMarquee/LogoMarquee';
-import StatusPagesSection from '../KeywordMonitoring/Sections/KeywordMonitotoringStatusPageSection';
-import TeamMembersSection from '../KeywordMonitoring/Sections/TeamMembersSection';
+import StatusPagesSection from './Sections/PingStatusPagesSection';
+import TeamMembersSection from './Sections/PingTeamMembersSection';
 import {
   PingMonitoringArticles,
   PingMonitoringFaq,

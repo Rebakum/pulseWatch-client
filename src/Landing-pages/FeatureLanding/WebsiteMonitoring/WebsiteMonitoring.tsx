@@ -11,11 +11,6 @@ import SetupShowcase from './sections/SetupShowcase';
 import SpotlightRows from './sections/SpotlightRows';
 import Testimonials from './sections/Testimonials';
 
-/**
- * Maps every section type to its component. Each key receives exactly the data
- * shape declared for that union member, so a missing or miswired section is a
- * compile error — no `any`, no assertions.
- */
 type SectionComponentMap = {
   [K in LandingSectionType]: ComponentType<{
     data: Extract<LandingSection, { type: K }>['data'];

@@ -1,5 +1,5 @@
 import type { FaqSectionData } from '@/types/landing';
-import FaqSection from '../../WebsiteMonitoring/sections/FaqSection';
+import FaqSection from './FaqSection';
 
 const DATA: FaqSectionData = {
   title: 'Frequently asked questions.',

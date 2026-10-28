@@ -1,5 +1,5 @@
 import type { IconCardsSectionData } from '@/types/landing';
-import IconCards from '../../WebsiteMonitoring/sections/IconCards';
+import IconCards from './IconCards';
 
 const DATA: IconCardsSectionData = {
   title: [

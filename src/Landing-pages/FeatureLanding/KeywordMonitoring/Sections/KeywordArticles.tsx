@@ -1,5 +1,5 @@
 import type { ArticleCardsSectionData } from '@/types/landing';
-import ArticleCards from '../../WebsiteMonitoring/sections/ArticleCards';
+import ArticleCards from './ArticleCards';
 
 const DATA: ArticleCardsSectionData = {
   title: 'Relevant articles.',

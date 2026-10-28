@@ -1,5 +1,5 @@
 import type { TestimonialsSectionData } from '@/types/landing';
-import Testimonials from '../../WebsiteMonitoring/sections/Testimonials';
+import Testimonials from './Testimonials';
 
 const DATA: TestimonialsSectionData = {
   title: [

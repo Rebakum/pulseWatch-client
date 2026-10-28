@@ -14,6 +14,7 @@ export default function SpotlightRows({ data }: SpotlightRowsProps) {
       <Container>
         {data.rows.map((row, index) => {
           const reversed = index % 2 === 1;
+
           const rowPadY = [
             index > 0 ? 'pt-16 lg:pt-20' : '',
             index < data.rows.length - 1 ? 'pb-16 lg:pb-20' : '',
@@ -26,6 +27,7 @@ export default function SpotlightRows({ data }: SpotlightRowsProps) {
               key={`${row.visual}-${index}`}
               className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${rowPadY}`}
             >
+              {/* কন্টেন্ট বা টেক্সট সেকশন */}
               <div className={reversed ? 'lg:order-2' : undefined}>
                 <h2 className="max-w-lg text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl">
                   {row.title}
