@@ -1,4 +1,5 @@
 import LogoMarquee from '../../HomePage/LogoMarquee/LogoMarquee';
+import ApiAlertingSection from './Sections/ApiAlertingSection';
 import {
   ApiMonitoringArticles,
   ApiMonitoringFaq,
@@ -9,15 +10,14 @@ import {
 import ApiMonitoringHero from './Sections/ApiMonitoringHero';
 import {
   ApiAdvancedFeatures,
-  ApiAlertingSection,
   ApiBenefitsSection,
   ApiMonitorTypes,
   ApiSignals,
-  ApiStatusPagesSection,
-  ApiTeamSection,
 } from './Sections/ApiMonitoringSections';
 import ApiMonitoringSetup from './Sections/ApiMonitoringSetup';
 import ApiReliabilitySection from './Sections/ApiReliabilitySection';
+import ApiStatusPagesSection from './Sections/ApiStatusPagesSection';
+import ApiTeamSection from './Sections/ApiTeamSection';
 
 export default function ApiMonitoringPage() {
   return (

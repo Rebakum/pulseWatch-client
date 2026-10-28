@@ -1,21 +1,16 @@
-import { Check, ChevronDown, TriangleAlert } from 'lucide-react';
-import type { ReactNode } from 'react';
 import type {
   AdvancedFeaturesSectionData,
   IconCardsSectionData,
   SpotlightRowsSectionData,
 } from '@/types/landing';
+import { Check, ChevronDown, TriangleAlert } from 'lucide-react';
+import type { ReactNode } from 'react';
 
-import Container from '@/components/common/Container';
 import AdvancedFeatures from './AdvancedFeatures';
 import IconCards from './IconCards';
-import SpotlightRows from './SpotlightRows';
 
 const advancedFeaturesData: AdvancedFeaturesSectionData = {
-  title: [
-    { text: 'Advanced features for dependable APIs' },
-    { text: '.', tone: 'brand' },
-  ],
+  title: [{ text: 'Advanced features for dependable APIs' }, { text: '.', tone: 'brand' }],
   items: [
     {
       title: 'Validate status codes and payloads',
@@ -126,18 +121,6 @@ export function ApiSignals() {
 
 export function ApiMonitorTypes() {
   return <IconCards data={monitorTypesData} />;
-}
-
-export function ApiStatusPagesSection() {
-  return <SpotlightRows data={statusPagesData} />;
-}
-
-export function ApiTeamSection() {
-  return <SpotlightRows data={teamData} />;
-}
-
-export function ApiAlertingSection() {
-  return <SpotlightRows data={alertingData} />;
 }
 
 export function ApiBenefitsSection() {
@@ -448,86 +431,5 @@ function LatencyVisual() {
         </div>
       </div>
     </PlaneStage>
-  );
-}
-
-/* ---------------------------------------------------------------------
-   Section data (text from the reference)
---------------------------------------------------------------------- */
-const FEATURES = [
-  {
-    title: 'Keep your API-powered services running smoothly',
-    description:
-      'Monitor your APIs for availability and performance before they disrupt users or cascade into system-wide outages (and dependent services).',
-    Visual: ApiMonitorsVisual,
-  },
-  {
-    title: 'Prevent cascading failures',
-    description:
-      'APIs often power mission-critical services. When an API breaks, everything connected to it can fail. Be the first to know when something goes wrong.',
-    Visual: CascadeVisual,
-  },
-  {
-    title: 'Go beyond "200 OK" with response checks',
-    description:
-      "Don't rely on status codes alone. Validate JSON, key fields, and expected values to catch broken responses, empty results, or unexpected messages before they cascade into bigger failures.",
-    Visual: ResponseCheckVisual,
-  },
-  {
-    title: 'Great for AI APIs and model routers',
-    description:
-      'AI endpoints can be available but still return unusable output. Monitor endpoints from providers like OpenAI, Anthropic, and OpenRouter. Validate structured JSON output, token usage, model metadata, and schema contracts to catch malformed responses.',
-    Visual: JsonVisual,
-  },
-  {
-    title: 'Detect and respond to performance drops',
-    description:
-      'Set response time thresholds to detect slow or degraded API performance before your customers do.',
-    Visual: LatencyVisual,
-  },
-] as const;
-
-export default function ApiReliabilitySection() {
-  return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-8 text-[var(--foreground)] sm:py-12">
-      <Container>
-        <div className="relative">
-          {/* vertical divider (desktop) */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-[var(--border)] lg:block"
-          />
-
-          {FEATURES.map(({ title, description, Visual }, index) => {
-            const reversed = index % 2 === 1;
-
-            return (
-              <div
-                key={title}
-                className={`relative grid items-center gap-8 py-12 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:py-20 ${
-                  index > 0
-                    ? "before:pointer-events-none before:absolute before:left-1/2 before:top-0 before:h-px before:w-screen before:-translate-x-1/2 before:bg-[var(--border)] before:content-['']"
-                    : ''
-                }`}
-              >
-                <div className={reversed ? 'lg:order-2 lg:pl-8' : 'lg:pr-8'}>
-                  <h2 className="max-w-lg text-2xl font-bold leading-snug tracking-tight sm:text-[1.75rem]">
-                    {title}
-                    <span className="bg-brand-gradient bg-clip-text text-transparent">.</span>
-                  </h2>
-                  <p className="mt-4 max-w-md text-sm leading-relaxed text-[var(--muted)]">
-                    {description}
-                  </p>
-                </div>
-
-                <div className={reversed ? 'lg:order-1' : undefined}>
-                  <Visual />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </Container>
-    </section>
   );
 }
