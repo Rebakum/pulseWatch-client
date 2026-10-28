@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense, use, type ComponentType } from 'react';
 import LogoMarquee from '../HomePage/LogoMarquee/LogoMarquee';
+import PortMonitoringPage from './PortMonitoring/PortMonitoringPage';
 
 interface FeatureLandingProps {
   page: FeatureLandingPage;
@@ -24,6 +25,7 @@ const FEATURE_PAGES: Record<string, ComponentType> = {
   'keyword-monitoring': KeywordMonitoringPage,
   'third-party-monitoring': ThirdPartyMonitoringPage,
   'ping-monitoring': PingMonitoringpge,
+  'port-monitoring': PortMonitoringPage,
 };
 
 export function generateFeatureLandingStaticParams() {

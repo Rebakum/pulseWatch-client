@@ -3,9 +3,9 @@ import { Activity, CheckCircle2, GitBranch, ShieldCheck } from 'lucide-react';
 import Container from '@/components/common/Container';
 import KeywordFreeAccountCta from '@/Landing-pages/FeatureLanding/KeywordMonitoring/Sections/KeywordFreeAccountCta';
 import StatusPagesSection from '@/Landing-pages/FeatureLanding/KeywordMonitoring/Sections/KeywordMonitotoringStatusPageSection';
-import TeamMembersSection from '@/Landing-pages/FeatureLanding/KeywordMonitoring/Sections/TeamMembersSection';
 import ArticleCards from '@/Landing-pages/FeatureLanding/WebsiteMonitoring/sections/ArticleCards';
 import FaqSection from '@/Landing-pages/FeatureLanding/WebsiteMonitoring/sections/FaqSection';
+import TeamMembersSection from '@/Pages/FeatureLanding/PortMonitoring/TeamMembersSection';
 import type { ArticleCardsSectionData, FaqSectionData } from '@/types/landing';
 
 const ARTICLES: ArticleCardsSectionData = {

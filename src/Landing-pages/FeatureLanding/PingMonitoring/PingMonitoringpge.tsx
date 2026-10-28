@@ -20,13 +20,13 @@ const PingMonitoringpge = () => {
     <div>
       <PingMonitoringHero />
       <LogoMarquee />
+      <PingReliabilitySection />
       <PingMonitoringSetupShowcase />
       <PingMonitoringAdvancedFeatures />
       <PingMonitoringInsightCards />
       <PingMonitoringTypeCards />
       <StatusPagesSection />
       <TeamMembersSection />
-      <PingReliabilitySection />
       <PingMonitoringFaq />
       <PingMonitoringArticles />
       <PingMonitoringFreeAccountCta />

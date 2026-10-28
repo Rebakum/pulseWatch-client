@@ -38,6 +38,23 @@
   }
 }
 
+@keyframes setup-progress {
+  to {
+    width: 100%;
+  }
+}
+
+.setup-progress {
+  animation: setup-progress 4s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .setup-progress {
+    animation: none;
+    width: 100%;
+  }
+}
+
 /* ---------- Theme variables (light / dark) ---------- */
 :root {
   color-scheme: light;
