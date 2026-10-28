@@ -1,4 +1,4 @@
-import BusinessOwnersPage from '@/components/common/Pages/Solution/BusinessOwners/BusinessOwnersPage';
+import BusinessOwnersPage from '@/Landing-pages/Solution/BusinessOwners/BusinessOwnersPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

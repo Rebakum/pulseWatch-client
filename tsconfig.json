@@ -21,6 +21,7 @@
       }
     ],
     "paths": {
+      "@/Pages/*": ["src/Landing-pages/*"],
       "@/*": ["./src/*"]
     }
   },
@@ -31,7 +32,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "src/components/common/Pages/Features/Website-monitoring/Keyword Monitoring"
+    "src/Pages/Features/Website-monitoring/Keyword Monitoring"
   ],
   "exclude": ["node_modules", ".next/dev/types"]
 }

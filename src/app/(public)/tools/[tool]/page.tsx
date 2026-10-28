@@ -1,4 +1,4 @@
-import FeatureLanding from '@/components/common/Pages/FeatureLanding/FeatureLanding';
+import FeatureLanding from '@/Landing-pages/FeatureLanding/FeatureLanding';
 import { TOOL_SLUGS } from '@/constants/feature-pages';
 import { findToolPage } from '@/constants/page-registry';
 import type { Metadata } from 'next';

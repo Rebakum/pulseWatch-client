@@ -24,7 +24,7 @@ const NavList = ({
   pathname,
   onNavigate,
 }: {
-  pathname: string;
+  pathname: string | null;
   onNavigate?: () => void;
 }) => (
   <ul className="space-y-1">
