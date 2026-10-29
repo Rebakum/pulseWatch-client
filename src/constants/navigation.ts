@@ -68,16 +68,12 @@ export const NAV_ITEMS: NavItem[] = [
         icon: Gauge,
         column: 2,
         links: [
+          { label: 'Multi-location monitoring', href: '/multi-location-monitoring' },
           { label: 'Response time monitoring', href: '/response-time-monitoring' },
           { label: 'SSL monitoring', href: '/ssl-monitoring' },
           { label: 'Domain monitoring', href: '/domain-monitoring' },
           { label: 'DNS monitoring', href: '/dns-monitoring' },
           { label: 'Maintenance windows', href: '/maintenance-windows' },
-          {
-            label: 'Multi-location monitoring',
-            href: '/multi-location-monitoring',
-            isComingSoon: true,
-          },
         ],
       },
       {

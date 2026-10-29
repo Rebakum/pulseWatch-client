@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense, use, type ComponentType } from 'react';
 import LogoMarquee from '../HomePage/LogoMarquee/LogoMarquee';
+import MultiLocationMonitoringPage from './MultiLocationMonitoring/MultiLocationMonitoringPage';
 import PortMonitoringPage from './PortMonitoring/PortMonitoringPage';
 import UdpMonitoringPage from './UdpMonitoring/UdpMonitoring';
 
@@ -32,6 +33,7 @@ const FEATURE_PAGES: Record<string, ComponentType> = {
   'cron-job-monitoring': CronJobMonitoringPage,
   'api-monitoring': ApiMonitoringPage,
   'udp-monitoring': UdpMonitoringPage,
+  'multi-location-monitoring': MultiLocationMonitoringPage,
 };
 
 export function generateFeatureLandingStaticParams() {

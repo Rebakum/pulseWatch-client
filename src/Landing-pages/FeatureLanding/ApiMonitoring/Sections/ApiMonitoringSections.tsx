@@ -75,7 +75,7 @@ const benefitsData: IconCardsSectionData = {
   ],
 };
 
-const statusPagesData: SpotlightRowsSectionData = {
+export const statusPagesData: SpotlightRowsSectionData = {
   rows: [
     {
       title: 'Build trust with clear API status updates.',
@@ -87,7 +87,7 @@ const statusPagesData: SpotlightRowsSectionData = {
   ],
 };
 
-const teamData: SpotlightRowsSectionData = {
+export const teamData: SpotlightRowsSectionData = {
   rows: [
     {
       title: 'Give API and on-call teams a shared view.',
@@ -99,7 +99,7 @@ const teamData: SpotlightRowsSectionData = {
   ],
 };
 
-const alertingData: SpotlightRowsSectionData = {
+export const alertingData: SpotlightRowsSectionData = {
   rows: [
     {
       title: 'Catch API errors and slowdowns before users notice.',
@@ -217,7 +217,7 @@ const MONITORS = [
   { name: 'GET /v1/health', code: '200 OK', bad: [] },
 ];
 
-function ApiMonitorsVisual() {
+export function ApiMonitorsVisual() {
   return (
     <PlaneStage w={API_W} h={API_H} scale="[--s:0.5] sm:[--s:0.7] lg:[--s:0.62] xl:[--s:0.78]">
       <DimPanel x={240} y={230} w={420} h={170} />
@@ -274,7 +274,7 @@ function CascadeNode({ right }: { right?: boolean }) {
   );
 }
 
-function CascadeVisual() {
+export function CascadeVisual() {
   return (
     <div aria-hidden="true" className="relative mx-auto w-full max-w-[34rem] py-6">
       <Glow />
@@ -312,7 +312,7 @@ function CascadeVisual() {
 const CHECK_W = 520;
 const CHECK_H = 340;
 
-function ResponseCheckVisual() {
+export function ResponseCheckVisual() {
   return (
     <PlaneStage
       w={CHECK_W}
@@ -359,7 +359,7 @@ function ResponseCheckVisual() {
 /* ---------------------------------------------------------------------
    Row 4: Great for AI APIs and model routers (flat JSON card)
 --------------------------------------------------------------------- */
-function JsonVisual() {
+export function JsonVisual() {
   return (
     <div aria-hidden="true" className="relative mx-auto w-full max-w-[34rem] py-6">
       <Glow />
@@ -390,7 +390,7 @@ function JsonVisual() {
 const LAT_W = 510;
 const LAT_H = 340;
 
-function LatencyVisual() {
+export function LatencyVisual() {
   return (
     <PlaneStage w={LAT_W} h={LAT_H} scale="[--s:0.42] sm:[--s:0.58] lg:[--s:0.52] xl:[--s:0.68]">
       <DimPanel x={280} y={260} w={420} h={180} />
