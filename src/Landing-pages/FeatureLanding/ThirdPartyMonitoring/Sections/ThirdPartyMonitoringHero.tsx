@@ -240,68 +240,6 @@ export default function ThirdPartyMonitoringHero() {
           </div>
         </div>
       </section>
-
-      {/* ================= CAPABILITIES ================= */}
-      <section className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 sm:py-[72px]">
-        <div className="mb-10 max-w-[640px]">
-          <p className="mb-3 bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-xs font-semibold uppercase tracking-[0.12em] text-transparent">
-            One connected view
-          </p>
-
-          <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            The full picture,{' '}
-            <span className="bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-transparent">
-              not just your piece of it.
-            </span>
-          </h2>
-
-          <p className="leading-7 text-[var(--muted)]">
-            When an upstream service has trouble, get the context to understand what is happening
-            and where to look next.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map(({ title, description, Icon }) => (
-            <article
-              key={title}
-              className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-6 transition duration-200 hover:-translate-y-1 hover:border-[var(--color-brand-blue)]/35"
-            >
-              <span className="mb-4 inline-grid size-11 place-items-center rounded-xl bg-[var(--color-brand-blue)]/[0.14] text-[var(--color-brand-blue)]">
-                <Icon size={21} aria-hidden="true" />
-              </span>
-
-              <h3 className="mb-2 text-base font-semibold">{title}</h3>
-
-              <p className="text-sm leading-6 text-[var(--muted)]">{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= BOTTOM CTA ================= */}
-      <section className="mx-auto mb-16 flex w-full max-w-[1240px] flex-col items-start justify-between gap-7 px-5 sm:px-8 lg:flex-row lg:items-center">
-        <div className="flex w-full flex-col items-start justify-between gap-7 rounded-3xl border border-[var(--color-brand-blue)]/25 bg-[color:var(--surface)] bg-[image:radial-gradient(circle_at_15%_0%,rgba(18,121,193,0.16),transparent_55%)] px-6 py-8 sm:px-10 sm:py-10 lg:flex-row lg:items-center">
-          <div className="max-w-[680px]">
-            <p className="mb-3 bg-gradient-to-r from-[#1479c0] via-[#5568b0] to-[#85429a] bg-clip-text text-xs font-semibold uppercase tracking-[0.12em] text-transparent">
-              Stay ahead of the next incident
-            </p>
-
-            <h2 className="mb-3 text-2xl font-bold leading-tight sm:text-3xl">
-              Know when a dependency is the problem.
-            </h2>
-
-            <p className="leading-7 text-[var(--muted)]">
-              Bring third-party status into your monitoring workflow with PulseWatch.
-            </p>
-          </div>
-
-          <ShaderButton href="/register">
-            Get started free
-            <ArrowRight size={18} aria-hidden="true" />
-          </ShaderButton>
-        </div>
-      </section>
     </main>
   );
 }

@@ -11,8 +11,15 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense, use, type ComponentType } from 'react';
 import LogoMarquee from '../HomePage/LogoMarquee/LogoMarquee';
+import AlertsNotificationsPage from './AlertsNotifications/AlertsNotificationsPage';
+import DnsMonitoringPage from './DNSMonitoring/DnsMonitoringPage';
+import DomainMonitoringPage from './DomainMonitoring/DomainMonitoringPage';
+import IncidentManagementPage from './IncidentManagement.tsx/IncidentManagementPage';
 import MultiLocationMonitoringPage from './MultiLocationMonitoring/MultiLocationMonitoringPage';
 import PortMonitoringPage from './PortMonitoring/PortMonitoringPage';
+import ResponseTimeMonitoringPage from './ResponseTimeMonitoring.tsx/ResponseTimeMonitoringPage';
+import SSLMonitoringPage from './SSLMonitoring/SSLMonitoringPage';
+import StatusPagesPage from './StatusPages/StatusPagesPage';
 import UdpMonitoringPage from './UdpMonitoring/UdpMonitoring';
 
 interface FeatureLandingProps {
@@ -34,6 +41,13 @@ const FEATURE_PAGES: Record<string, ComponentType> = {
   'api-monitoring': ApiMonitoringPage,
   'udp-monitoring': UdpMonitoringPage,
   'multi-location-monitoring': MultiLocationMonitoringPage,
+  'response-time-monitoring': ResponseTimeMonitoringPage,
+  'ssl-monitoring': SSLMonitoringPage,
+  'domain-monitoring': DomainMonitoringPage,
+  'dns-monitoring': DnsMonitoringPage,
+  'incident-management': IncidentManagementPage,
+  'status-pages': StatusPagesPage,
+  'alerts-notifications': AlertsNotificationsPage,
 };
 
 export function generateFeatureLandingStaticParams() {

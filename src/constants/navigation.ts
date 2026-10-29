@@ -73,7 +73,6 @@ export const NAV_ITEMS: NavItem[] = [
           { label: 'SSL monitoring', href: '/ssl-monitoring' },
           { label: 'Domain monitoring', href: '/domain-monitoring' },
           { label: 'DNS monitoring', href: '/dns-monitoring' },
-          { label: 'Maintenance windows', href: '/maintenance-windows' },
         ],
       },
       {

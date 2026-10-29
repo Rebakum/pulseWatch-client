@@ -1,3 +1,4 @@
+import LogoMarquee from '@/Pages/HomePage/LogoMarquee/LogoMarquee';
 import {
   MultiLocationStatusPages,
   MultiLocationTeamSection,
@@ -18,6 +19,7 @@ export default function MultiLocationMonitoringPage() {
   return (
     <div>
       <MultiLocationHero />
+      <LogoMarquee />
       <MultiLocationReliabilitySection />
       <MultiLocationReferenceFeaturesSection />
       <MultiLocationSetupSection />
